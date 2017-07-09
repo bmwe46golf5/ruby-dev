@@ -1,0 +1,58 @@
+footer{
+  .gl-footer-top-wrapper{
+
+    .gl-footer-widget{
+
+      .gl-footer-widget-content{
+        ul{
+          li{
+            a{
+              &:hover{
+                color: @gl-bz-primary-color;
+              }
+            }
+          }
+        }
+      }
+
+      &.gl-useful-links{
+        ul{
+          li{
+            a{
+              &:hover{
+                &:before{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.gl-subscribe-widget{
+        form{
+          button{
+            background-color: @gl-bz-primary-color;
+            color: @gl-heading-base-color;
+
+            &:hover{
+              background-color: darken(@gl-bz-primary-color, 5%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gl-footer-bottom-wrapper{
+    ul{
+        li{          
+          a{
+            &:hover{
+              color: @gl-bz-primary-color;
+            }
+          }
+        }
+    }
+  }
+}

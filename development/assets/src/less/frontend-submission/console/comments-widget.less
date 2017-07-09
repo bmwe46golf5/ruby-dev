@@ -1,0 +1,193 @@
+/***********************
+COMMENTS WIDGET
+***********************/
+.up-redq-comments-widgets{
+    .up-redq-comments-list-wrapper{
+        display: block;
+
+        .up-redq-comments-list{
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            -webkit-flex-direction: row; /* Safari */
+            flex-direction:         row;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-align-items: center; /* Safari */
+            align-items:         center;
+            flex-wrap: wrap;
+
+            padding: 25px 20px;
+            border: 1px solid #eeeeee;
+            border-bottom: 0;
+            border-left: 0;
+            position: relative;
+            
+            &:before{
+                content: '';
+                width: 3px;
+                height: calc(~"100% + 1px");
+                position: absolute;
+                display: inline-block;
+                top: -1px;
+                left: 0;
+            }
+
+            &:last-child{
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .up-redq-usercomments{
+                flex-basis: 55%;
+
+                @media @smartphone_port{
+                    flex-basis: 100%;
+                    margin-bottom: 10px;
+                }
+
+                h3{
+                    font-size: @rq-up-fs-base;
+                    color: @rq-up-fc-default;
+                    font-weight: @rq-up-fw-normal;
+                    line-height: 1.5;
+                    margin: 0;
+
+                    a{
+                        font-size: @rq-up-fs-base;
+                        color: @rq-up-fc-default;
+                        font-weight: @rq-up-fw-bold;
+                        line-height: 1.5;
+                        .gl-transition;
+
+                        &.up-redq-user{
+                            &:hover{
+                                color: @rq-up-primary-color;
+                            }
+                        }
+
+                        &.up-redq-category{
+                            &:hover{
+                                color: @rq-up-color-red;
+                            }
+                        }
+                    }
+                }
+
+                p.up-redq-comments{
+                    font-size: @rq-up-fs-base;
+                    color: @rq-up-fc-default;
+                    font-weight: @rq-up-fw-normal;
+                    margin: 0;
+                    line-height: 1.5;
+                }
+            }
+
+            span.up-redq-comment-date{
+                font-size: @rq-up-fs-base - 1;
+                color: @rq-up-fc-alt;
+                font-weight: @rq-up-fw-normal;
+            }
+
+            span.up-redq-status{
+                font-size: @rq-up-fs-base - 1;
+                color: #ffffff;
+                font-weight: @rq-up-fw-normal;
+                width: 60px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                .gl-border-radius(3px);
+            }
+
+            .up-dropdown-toggle-btn{
+                position: relative;
+
+                button.up-redq-settings-icon{
+                    font-size: @rq-up-fs-base + 2;
+                    color: @rq-up-fc-default;
+                    display: inline-block;
+                    line-height: 30px;
+                    border: 0;
+                    outline: 0;
+                    padding: 0;
+                    background-color: transparent;
+                }
+        
+                ul.up-redq-option-dropdown{
+                    min-width: 200px;
+                    position: absolute;
+                    z-index: 1;
+                    top: -15px;
+                    right: -10px;
+                    background-color: #fff;
+                    display: none;
+                    -webkit-animation-name: fadeIn;
+                    animation-name: fadeIn;
+                    -webkit-animation-duration: .3s;
+                    animation-duration: .3s;
+                    .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+        
+                    li{
+                        height: 52px;
+                        line-height: 1;
+                        border-bottom: 1px solid #eeeeee;
+                        background-color: #fff;
+                        .gl-transition;
+        
+                        a{
+                            font-size: @rq-up-fs-base;
+                            font-weight: @rq-up-fw-bold;
+                            color: @rq-up-fc-default;
+                            padding: 0 15px;
+                            line-height: 50px;
+                            display: block;
+                            float: left;
+                            width: 100%;
+        
+                            i{
+                                color: @rq-up-fc-alt;
+                                font-size: 18px;
+                                padding-right: 20px;
+                                line-height: 46px;
+                                float: left;
+                            }
+                        }
+        
+                        &:hover{
+                            background-color: @rq-up-color-light-green;
+                        }
+                    }
+                }
+            }
+
+            &.published-comment{
+                &:before{
+                    background-color: @rq-up-primary-color;
+                }
+
+                span.up-redq-status{
+                    background-color: @rq-up-primary-color;
+                }
+            }
+
+            &.pending-comment{
+                &:before{
+                    background-color: @rq-up-color-gray;
+                }
+
+                span.up-redq-status{
+                    background-color: @rq-up-color-gray;
+                }
+            }
+
+            &.rejected-comment{
+                &:before{
+                    background-color: #df3e3e;
+                }
+
+                span.up-redq-status{
+                    background-color: #df3e3e;
+                }
+            }
+        }
+    }
+}

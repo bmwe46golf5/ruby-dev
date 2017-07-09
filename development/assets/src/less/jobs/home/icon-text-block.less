@@ -1,0 +1,36 @@
+.gl-service-section-wrapper{
+  background-color: @gl-bz-primary-color;
+  .gl-icon-top-with-text{
+    .gl-icon-wrapper{
+      background-color: rgba(255, 255, 255, 0.16);
+      position: relative;
+      margin-bottom: 30px;
+      .gl-border-radius;
+
+      &:after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: rgba(255, 255, 255, 0.16) transparent transparent transparent;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+      }
+    }
+
+    h3{
+      color: #ffffff;
+    }
+
+    p{
+      color: #dffeff;
+    }
+  }
+}

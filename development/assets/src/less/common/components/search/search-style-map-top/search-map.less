@@ -1,0 +1,21 @@
+.gl-search-map-section{
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  #gl-search-map,
+  .gl-search-map{
+    width: 100%;
+    height: 500px;
+  }
+
+  .gl-scroll-down{
+    display: none;     
+    @media @smartphone_port{
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      }
+  }
+}

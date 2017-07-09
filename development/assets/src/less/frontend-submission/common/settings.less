@@ -1,0 +1,99 @@
+/*
+SETTINGS
+*/
+.up-redq-settings-options{
+    width: 100%;
+    height: 65px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction:         row;
+    justify-content: flex-end;
+    -webkit-align-items: center; /* Safari */
+    align-items:         center;
+    padding-right: 30px;
+    background-color: #fbfcfa;
+    border-bottom: 1px solid @rq-up-border-color;
+
+    @media @smartphone_port{
+      justify-content: space-between;
+      padding-left: 30px;
+    }
+
+    button.up-redq-btn{
+        font-size: @rq-up-fs-base;
+        font-weight: @rq-up-fw-bold;
+        color: @rq-up-fc-default;
+        line-height: 28px;
+        height: 30px;
+        padding: 0 10px;
+        margin-right: 10px;
+        text-align: center;
+        display: inline-block;
+        background-color: #fff;
+        outline: 0;
+        border: 1px solid @rq-up-border-color;
+        .gl-border-radius(5px);
+    }
+
+    .up-redq-settings{
+        position: relative;
+        
+        button.up-redq-settings-icon{
+            font-size: @rq-up-fs-base + 2;
+            color: @rq-up-fc-default;
+            display: inline-block;
+            line-height: 30px;
+            border: 0;
+            outline: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        ul.up-redq-option-dropdown{
+            min-width: 200px;
+            position: absolute;
+            z-index: 1;
+            top: -15px;
+            right: -10px;
+            display: none;
+            background-color: #fff;
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+            -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+            .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+
+            li{
+                height: 52px;
+                line-height: 1;
+                border-bottom: 1px solid #eeeeee;
+                background-color: #fff;
+                .gl-transition;
+
+                a{
+                    font-size: @rq-up-fs-base;
+                    font-weight: @rq-up-fw-bold;
+                    color: @rq-up-fc-default;
+                    padding: 0 15px;
+                    line-height: 50px;
+                    display: block;
+                    float: left;
+                    width: 100%;
+
+                    i{
+                        color: @rq-up-fc-alt;
+                        font-size: 18px;
+                        padding-right: 20px;
+                        line-height: 46px;
+                        float: left;
+                    }
+                }
+
+                &:hover{
+                    background-color: @rq-up-color-light-green;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+// JOB ACCORDION
+.gl-search-style-map-left,
+.gl-search-style-map-right{
+
+  .gl-job-list-item{
+
+    .gl-job-list-item-wrapper{
+      @media @smartphone_port, @tablet_port ,@tablet_land{
+          display: block;
+      }
+
+      a{
+        display: block;
+        
+        .gl-job-item-part{
+
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              display: block;
+              margin-bottom: 15px;
+              text-align: center;
+
+              &:last-child{
+                  margin-bottom: 0;
+              }
+          }
+        }
+
+        .gl-job-company-logo{
+
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              width: 100%;
+          }
+        }
+
+        .gl-job-position-company{
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              width: 100%;
+          }
+
+          h3{
+              @media @smartphone_port, @tablet_port ,@tablet_land{
+                  display: block;
+                  float: none;
+                  padding-right: 0;
+                  margin-right: 0;
+                  border-right: 0px solid;
+              }
+          }
+
+          p{
+            @media @smartphone_port, @tablet_port ,@tablet_land{
+                  display: block;
+                  float: none;
+              }
+          }
+        }
+
+        .gl-job-availability{
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              width: 100%;
+          }
+        }
+
+        .gl-job-sallery{
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              width: 100%;
+          }
+        }
+
+        .gl-job-location{
+          @media @smartphone_port, @tablet_port ,@tablet_land{
+              width: 100%;
+          }
+        }
+      }
+    }
+
+    .gl-job-list-details{
+      background-color: #fdfdfd;
+
+
+      > .panel-body,
+      > .list-group{
+        border: 0px solid;
+        padding: 60px 120px;
+
+          @media @smartphone_port{
+              padding: 60px 20px;
+          }
+
+          @media @tablet_port, @tablet_land{
+              padding: 60px 30px;
+          }
+      }
+    }
+  }
+}

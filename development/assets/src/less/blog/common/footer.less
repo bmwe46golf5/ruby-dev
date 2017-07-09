@@ -1,0 +1,44 @@
+footer{
+  .gl-footer-top-wrapper{
+
+    .gl-footer-widget{
+
+      .gl-footer-widget-content{
+        ul{
+          li{
+            a{
+              &:hover{
+                color: @gl-bz-primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .gl-footer-widget.gl-useful-links{
+      ul{
+        li{
+          a{
+            &:hover{
+              &:before{
+                color: @gl-bz-primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .gl-footer-widget.gl-subscribe-widget{
+      form{
+        button{
+          background-color: @gl-bz-primary-color;
+          &:hover{
+            background-color: darken(@gl-bz-primary-color, 5%);
+          }
+        }
+      }
+    }
+  }
+}

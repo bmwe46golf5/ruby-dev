@@ -1,0 +1,145 @@
+/***********************
+LISTING WIDGET
+***********************/
+.up-redq-listing-widgets{
+    .up-redq-listings-list{
+        border: 1px solid #eeeeee;
+
+        .up-redq-list-item{
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            -webkit-flex-direction: row; /* Safari */
+            flex-direction:         row;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-align-items: center; /* Safari */
+            align-items:         center;
+            flex-wrap: wrap;
+            
+            padding: 20px 25px;
+            border-bottom: 1px solid #eeeeee;
+
+            @media @smartphone_port{
+                padding: 20px 15px;
+            }
+
+            &:last-child{
+                border-bottom: 0;
+            }
+
+            > *{
+                flex-basis: 15%;
+            }
+
+            h3.up-redq-service-name{
+                font-size: @rq-up-fs-base + 4;
+                color: @rq-up-fc-default;
+                font-weight: @rq-up-fw-bold;
+                margin: 0;
+                flex-basis: 43%;
+
+                @media @smartphone_port{
+                    flex-basis: 100%;
+                }
+
+                @media @smartphone_land{
+                    margin-bottom: 10px;
+                }
+            }
+
+            span{
+                @media @smartphone_port{
+                    flex-basis: 50%;
+                    margin-top: 10px;
+                }
+
+                @media @smartphone_land{
+                    flex-basis: 15%;
+                    margin-top: 0;
+                }
+            }
+
+            a.up-redq-username{
+                font-size: @rq-up-fs-base;
+                color: @rq-up-fc-default;
+                font-weight: @rq-up-fw-bold;
+                .gl-transition;
+
+                &:hover{
+                    color: @rq-up-primary-color;
+                }
+            }
+
+            a.up-redq-listing-category{
+                font-size: @rq-up-fs-base;
+                font-weight: @rq-up-fw-bold;
+                flex-basis: 12.5%;
+
+                @media @smartphone_port{
+                    flex-basis: 50%;
+                }
+
+                @media @smartphone_land{
+                    flex-basis: 12.5%;
+                }
+
+                &.business{
+                    color: @rq-up-primary-color;
+                }
+
+                &.restaurant{
+                    color: @rq-up-color-light-yellow;
+                }
+
+                &.job{
+                    color: @rq-up-color-blue;
+                }
+            }
+
+            span.up-redq-post-time{
+                font-size: @rq-up-fs-base - 1;
+                color: @rq-up-fc-alt;
+                font-weight: @rq-up-fw-normal;
+                flex-basis: 17%;
+
+                @media @smartphone_port{
+                    flex-basis: 50%;
+                }
+
+                @media @smartphone_land{
+                    flex-basis: 30%;
+                }
+            }
+
+            .up-redq-fav-btn{
+                flex-basis: 0;
+                label{
+                    cursor: pointer;
+                    padding: 0 1px;
+                    display: -webkit-flex; /* Safari */
+                    display: flex;
+
+                    i{
+                        font-size: @rq-up-fs-base + 4;
+                    }
+                }
+
+                input{
+                    display: none;
+                }
+
+                input + label{
+                    i{
+                        color: @rq-up-color-gray;
+                    }
+                }
+
+                input:checked + label{
+                    i{
+                        color: @rq-up-color-red;
+                    }
+                }
+            }
+        }
+    }
+}

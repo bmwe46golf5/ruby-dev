@@ -1,0 +1,82 @@
+// Compare Btn
+.gl-compare-btn{
+    .icon-bar {
+      display: block;
+      width: 6px;
+      height: 2px;
+      border-radius: 0px;
+      background-color: #bababa;
+
+      &:nth-child(2){
+        width: 10px;
+        margin-top: 2px;
+      }
+
+      &:nth-child(3){
+        width: 8px;
+        margin-top: 2px;
+      }
+    }
+}
+
+// Post wrapper btn
+.gl-more-post-wrapper,
+.gl-more-btn-wrapper,
+.gl-btns-wrapper{
+  display: block;
+  overflow: hidden;
+  margin-top: 70px;
+  text-align: center;
+}
+
+
+/*
+  Button Styling
+*/
+.gl-btn{
+  font-family: @gl-font-heading;
+  font-size: @gl-font-size-base - 1;
+  font-weight: @gl-bold-font;
+  color: #ffffff;
+  line-height: 1;
+  background-color: @gl-footer-top-bg;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  overflow: hidden;
+  padding: 15px 30px;
+  border: 0px solid;
+  outline: 0;
+  cursor: pointer;
+  .gl-border-radius;
+
+  .gl-transition;
+
+  i{
+    font-size: @gl-font-size-base;
+    margin-right: 10px;
+    line-height: 1;
+  }
+
+  &:hover,
+  &:focus{
+    color: #ffffff;
+  }
+
+  &.gl-flat-btn{
+    .gl-border-radius(0);
+  }
+
+  // Extra large Button
+  &.gl-large-btn{
+    padding: 15px 50px;
+  }
+
+  &.gl-shadow-btn{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 50px;
+    font-size: @gl-font-size-base + 2;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1), inset 0 0 1px #f0f0f0;
+  }
+}

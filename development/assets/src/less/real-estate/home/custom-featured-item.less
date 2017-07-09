@@ -1,0 +1,101 @@
+.gl-custom-prop-section{
+  background: url("@{gl-img-root}feat-item.jpg") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+
+  &:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.35);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .gl-custom-prop-features{
+    width: 375px;
+    padding: 65px 80px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background-color: rgba(0,0,0,0.6);
+    position: relative;
+    z-index: 10;
+    @media @smartphone_port{
+        width: 100%;
+        padding: 60px 15px;
+    }
+
+    h3{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-h1;
+      font-weight: @gl-bold-font;
+      color: #ffffff;
+      margin: 0 0 15px;
+      display: block;
+    }
+
+    p{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: #ffffff;
+      margin-bottom: 0;
+      position: relative;
+      padding-left: 30px;
+
+      i{
+        font-size: 21px;
+        position: absolute;
+        top: -5px;
+        left: 0;
+      }
+    }
+
+    ul{
+      display: block;
+      overflow: hidden;
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      li{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 3;
+        font-weight: @gl-light-font;
+        color: #ffffff;
+        display: block;
+        padding: 15px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+        span{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 3;
+          font-weight: @gl-light-font;
+          color: #ffffff;
+          float: right;
+        }
+
+        &.gl-feat-prop-price{
+          line-height: 30px;
+          span{
+            font-size: @gl-font-size-base + 6;
+          }
+        }
+      }
+    }
+
+    .gl-btn{
+      background-color: @gl-bz-primary-color;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 10%);
+      }
+    }
+  }
+}

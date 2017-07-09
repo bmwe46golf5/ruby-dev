@@ -1,0 +1,109 @@
+.gl-search-expand-btn{
+    background-color: @gl-bz-primary-color;
+}
+
+.gl-search-style-map-right{
+    .gl-search-filter-bar{
+        background-color: #fffcf7;
+
+        .gl-search-filter-wrapper{
+
+          form{
+            .gl-filter-options{
+              background-color: #fef9f1;
+
+              &.gl-search-location{
+                 &:after{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+
+            .gl-search-category{
+              background-color: #fef9f1;
+
+              .select2-container{
+                  background-color: #fef9f1;
+
+                  .select2-selection--single{
+                    background-color: #fef9f1;                
+                  }
+                }
+            }
+
+            .gl-range-wrapper{
+              .gl-range-slider {
+                .irs-line {
+                  background-color: @gl-bz-primary-color;
+                }
+
+                .irs-bar,
+                .irs-bar-edge {
+                  background: @gl-bz-primary-color;
+                }
+              }
+            }
+
+            .gl-btn{
+                background-color: @gl-bz-primary-color;
+                color: #ffffff;
+            }
+          }
+        }
+    }
+}
+
+// Search style Alt
+.gl-search-style-map-right{
+  &.gl-search-style-alt{
+    .gl-search-filter-bar{
+        .gl-search-filter-wrapper{
+          form{
+            .gl-filter-options{
+              &.gl-search-location{
+                 &:after{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+
+            .gl-search-category{
+              .select2-container{
+                  background-color: #ffffff;
+
+                  .select2-selection--single{
+                    background-color: #ffffff;                
+                  }
+                }
+            }
+
+            .gl-range-wrapper{
+              .gl-range-slider {
+                .irs-line {
+                  background-color: @gl-bz-primary-color;
+                }
+
+                .irs-bar,
+                .irs-bar-edge {
+                  background: @gl-bz-primary-color;
+                }
+
+                .irs-slider {
+                  border: 3px solid @gl-bz-primary-color;
+                }
+
+                .irs-from, .irs-to, .irs-single {
+                  background-color: #ffffff;
+                }
+              }
+            }
+
+            .gl-btn{
+                background-color: @gl-bz-primary-color;
+                color: #ffffff;
+            }
+          }
+        }
+    }
+  }
+}

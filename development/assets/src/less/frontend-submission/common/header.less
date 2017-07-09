@@ -1,0 +1,304 @@
+/*
+Header
+*/
+.up-redq-header-wrapper{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+    height: 55px;
+    border-bottom: 1px solid @rq-up-border-color;
+    // border-left: 1px solid @rq-up-border-color;
+
+    @media @smartphone_port{
+      position: relative;
+      z-index: 1000;
+    }
+
+    button.toggle-nav{
+        outline: 0;
+        border: 0;
+        background-color: transparent;
+        display: inline-block;
+        padding: 5px;
+        position: absolute;
+        left: 20px;
+        top: calc(~"50% - 12px");
+
+         // Bars
+          .up-nav-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: @rq-up-primary-color;
+          }
+          .up-nav-bar + .up-nav-bar {
+            margin-top: 4px;
+          }
+    }
+
+    .up-redq-header-content{
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        -webkit-flex-direction: row; /* Safari */
+        flex-direction:         row;
+        -webkit-align-items: center; /* Safari */
+        align-items:         center;
+        float: right;
+        height: 55px;
+
+        > li{
+            padding: 0 20px;
+            line-height: 55px;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+
+            // Inbox
+            &.up-redq-inbox{
+                font-family: inherit;
+                font-size: @rq-up-fs-base;
+                font-weight: @rq-up-fw-normal;
+                color: @rq-up-fc-default;
+                // line-height: 1;
+                border-left: 1px solid @rq-up-border-color;
+                border-right: 1px solid @rq-up-border-color;
+
+                @media @smartphone_port{
+                    span.up-redq-inbox-title{
+                        display: none;
+                    }
+                }
+
+                span.up-redq-icon-holder{
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 15px;
+                    
+                    i{
+                        font-size: @rq-up-fs-base + 7;
+                        color: @rq-up-fc-default;
+                        vertical-align: middle;
+                    }
+
+                    span.up-redq-msg-count{
+                        font-size: @rq-up-fs-base - 3;
+                        color: #ffffff;
+                        width: 15px;
+                        height: 15px;
+                        background-color: @rq-up-color-red;
+                        position: absolute;
+                        top: 10px;
+                        right: -8px;
+                        line-height: 15px;
+                        text-align: center;
+                        .gl-border-radius(50%);
+                    }
+                }
+
+                ul.up-redq--dropdown{
+                    display: -webkit-flex; /* Safari */
+                    display: flex;
+                    -webkit-flex-direction: column; /* Safari */
+                    flex-direction:         column;
+                    min-width: 280px;
+                    position: absolute;
+                    z-index: 1;
+                    top: calc(~"100% + 49px");
+                    right: 0;
+                    background-color: #fff;
+                    opacity: 0;
+                    visibility: hidden;
+                    .gl-transition;
+                    .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+
+                    @media @smartphone_port{
+                        right: -86px;
+                    }
+
+                    @media @smartphone_land{
+                        right: 0;
+                    }
+
+                    &.animate-dropdown-menu{
+                        top: 100%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    li{
+                        line-height: 1;
+                        border-bottom: 1px solid #eeeeee;
+                        background-color: #fff;
+                        .gl-transition;
+
+                        &:hover{
+                            background-color: @rq-up-color-light-green;
+                        }
+
+
+                        a{
+                            padding: 20px 15px;
+                            display: -webkit-flex; /* Safari */
+                            display: flex;
+                            -webkit-flex-direction: row; /* Safari */
+                            flex-direction:         row;
+                            -webkit-justify-content: flex-start; /* Safari */
+                            justify-content:         flex-start;
+                            -webkit-align-items: center; /* Safari */
+                            align-items:         center;
+                            
+                            span.up-user-img{
+                                width: 36px;
+                                height: 36px;
+                                .gl-border-radius(50%);
+                                background-color: #e8e8e8;
+                                position: relative;
+                                margin-right: 20px;
+
+                                span.up-user-status{
+                                    width: 8px;
+                                    height: 8px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 4px;
+                                    .gl-border-radius(50%);
+                                    background-color: #e8e8e8;
+
+                                    &.up-online{
+                                        background-color: @rq-up-online;
+                                    }
+
+                                    &.up-away{
+                                        background-color: @rq-up-away;
+                                    }
+                                }
+                            }
+
+                            span.up-user-info{
+                                h3{
+                                    font-size: @rq-up-fs-base;
+                                    font-weight: @rq-up-fw-bold;
+                                    color: @rq-up-fc-default;
+                                    margin: 0 0 5px;
+                                    display: block;
+
+                                    span{
+                                        font-size: @rq-up-fs-base;
+                                        font-weight: @rq-up-fw-bold;
+                                        color: @rq-up-fc-default;
+                                        padding-left: 5px;
+                                    }
+                                }
+
+                                span.up-msg-excerpt{
+                                    font-size: @rq-up-fs-base - 1;
+                                    font-weight: @rq-up-fw-normal;
+                                    color: @rq-up-fc-default;
+                                    margin: 0 0 5px;
+                                    display: block;
+                                }
+
+                                span.up-msg-time{
+                                    font-size: @rq-up-fs-base - 1;
+                                    font-weight: @rq-up-fw-normal;
+                                    color: @rq-up-fc-alt;
+                                    margin: 0;
+                                    display: block;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            // Settings
+            &.up-redq-usericon{
+                padding-right: 30px;
+
+                span.up-redq-username{
+                    font-size: @rq-up-fs-base;
+                    font-weight: @rq-up-fw-normal;
+                    color: @rq-up-fc-default;
+                    line-height: 36px;
+                    padding-right: 20px;
+                    display: inline-block;
+                    float: left;
+
+                    @media @smartphone_port{
+                        display: none;
+                    }
+
+                }
+
+                span.up-redq-userimg-wrapper{
+                    width: 36px;
+                    height: 36px;
+                    display: inline-block;
+                    float: left;
+                    .gl-border-radius(50%);
+                    background-color: #e8e8e8;
+
+                     img{
+                        position: absolute;
+                    }
+                }
+
+                ul.up-redq--dropdown{
+                    min-width: 280px;
+                    position: absolute;
+                    z-index: 1;
+                    top: calc(~"100% + 49px");
+                    right: 0;
+                    background-color: #fff;
+                    opacity: 0;
+                    visibility: hidden;
+                    .gl-transition;
+                    .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+
+                    &.animate-dropdown-menu{
+                        top: calc(~"100% + 9px");
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+
+                    li{
+                        height: 52px;
+                        line-height: 1;
+                        border-bottom: 1px solid #eeeeee;
+                        background-color: #fff;
+                        .gl-transition;
+
+                        a{
+                            font-size: @rq-up-fs-base;
+                            font-weight: @rq-up-fw-bold;
+                            color: @rq-up-fc-default;
+                            padding: 0 15px;
+                            line-height: 50px;
+                            display: block;
+                            float: left;
+                            width: 100%;
+
+                            i{
+                                color: @rq-up-fc-alt;
+                                font-size: 18px;
+                                padding-right: 20px;
+                                line-height: 46px;
+                                float: left;
+                            }
+                        }
+
+                        &:hover{
+                            background-color: @rq-up-color-light-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

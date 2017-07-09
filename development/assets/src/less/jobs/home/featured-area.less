@@ -1,0 +1,149 @@
+.gl-featured-areas-section{
+  background-color: @gl-bz-primary-color;
+  padding-bottom: 0;
+  border-bottom: 0px solid;
+
+  .gl-section-headings{
+    h1,
+    p{
+      color: #ffffff;
+    }
+  }
+
+  .gl-feat-areas-wrapper{
+    display: block;
+    overflow: hidden;
+
+    .gl-feat-areas{
+      width: 100%/4;
+      height: 220px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      .gl-transition;
+
+        @media @smartphone_port{
+            width: 100%;
+            height: auto;
+        }
+
+        @media @smartphone_land{
+            width: 100%/2;
+            height: 180px;
+        }
+
+        @media @tablet_port{
+            width: 100%/2;
+            height: 280px;
+        }
+
+        @media @tablet_land{
+            height: 180px;
+        }
+
+        @media @larger_res{
+            height: 300px;
+        }
+
+
+      img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        .gl-baziar-transition;
+
+        @media @smartphone_port{
+          position: relative;
+        }
+      }
+
+      a.gl-img-overlay-effect{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .gl-transition;
+
+        span.gl-cat-link{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-h1;
+          font-weight: @gl-normal-font;
+          color: #ffffff;
+          text-align: center;
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          .gl-transform(0,-50%);
+          -webkit-transition: all 0.8s cubic-bezier(.28,.75,.25,1);
+           -moz-transition: all 0.8s cubic-bezier(.28,.75,.25,1);
+             -ms-transition: all 0.8s cubic-bezier(.28,.75,.25,1);
+                -o-transition: all 0.8s cubic-bezier(.28,.75,.25,1);
+                    transition: all 0.8s cubic-bezier(.28,.75,.25,1);
+        }
+
+        span.gl-total-listing{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base;
+          font-weight: @gl-bold-font;
+          color: #001230;
+          line-height: 1;
+          padding: 8px 15px;
+          background-color: @gl-bz-primary-color;
+          position: absolute;
+          bottom: 30px;
+          right: 10px;
+        }
+      }
+
+      &:hover{
+        img{
+          -webkit-transform: scale(1.05) translate3d(0,0,0);
+             -moz-transform: scale(1.05) translate3d(0,0,0);
+              -ms-transform: scale(1.05) translate3d(0,0,0);
+               -o-transform: scale(1.05) translate3d(0,0,0);
+                  transform: scale(1.05) translate3d(0,0,0);
+        }
+        .gl-img-overlay-effect{
+          background-color: rgba(0,0,0,0.4);
+
+          span.gl-cat-link{
+            // top: 60%;
+            // font-size: @gl-font-size-h1 - 8;
+          }
+        }
+      }
+    }
+  }
+
+  .gl-more-areas-link{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    padding: 60px 0;
+    background-color: @gl-footer-top-bg;
+
+    a{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-h3;
+      font-weight: @gl-normal-font;
+      color: #f9f9f9;
+      line-height: 1;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+  }
+}

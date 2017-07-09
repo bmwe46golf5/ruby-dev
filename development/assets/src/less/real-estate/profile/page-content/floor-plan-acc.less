@@ -1,0 +1,54 @@
+.gl-floor-plan-accordion{
+  .gl-floorplan-item{
+    width: 100%;
+    display: block;
+    border: 1px solid #f2f2f2;
+    margin: 0;
+
+    .gl-floorplan-item-wrapper{
+      display: block;
+      background-color: #fff;
+      padding: 15px 20px;
+      position: relative;
+
+      a{
+        display: block;
+
+        h3{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base + 2;
+          font-weight: @gl-normal-font;
+          color: @gl-heading-base-color;
+          margin: 0 0 0;
+        }
+
+        span.gl-toggle-symbol{
+          position: absolute;
+          top: 7px;
+          right: 20px;
+
+          i{
+            font-size: 24px;
+            color: #888888;
+          }
+        }
+      }
+    }
+
+    .gl-floorplan-details{
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid #ededed;
+      border-bottom: 0px;
+
+      .panel-body{
+        padding: 20px;
+        border: 0px solid #f2f2f2;
+      }
+    }
+  }
+
+  .panel-group .panel + .panel {
+      margin-top: -1px;
+  }
+}

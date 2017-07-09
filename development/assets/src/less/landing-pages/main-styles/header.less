@@ -1,0 +1,136 @@
+header.gl-transparent-header{
+  background-color: transparent;
+  width: 100%;
+  z-index: 1000;
+  padding: 60px 80px 0;
+  position: absolute;
+  top: 0;
+  // box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  .gl-transition(.6s);
+
+  @media @smartphone_port {
+    padding: 20px 15px 0;
+  }
+
+  @media @tablet_port, @tablet_land{
+    padding-top: 30px;
+  }
+
+  .gl-header-main-menu{
+      margin-bottom: 0;
+      border: 0px solid;
+
+      .container-fluid,
+      .container{
+        position: relative;
+
+        .navbar-header{
+            a{
+                padding: 5px 15px 15px;  
+            }
+
+            @media @smartphone_port{
+                .navbar-toggle{
+                    margin-right: 0px;
+                    z-index: 10;
+
+                    .icon-bar{
+                        background-color: #ffffff;
+                    }
+                }
+            }
+            
+        }
+
+        .gl-menu-wrapper{
+          text-align: right;
+          font-size: 0;
+          float: right;
+
+            @media @smartphone_port{
+                padding: 0;
+
+                &.navbar-collapse {
+                    width: 100%;
+                    overflow: hidden;
+                    float: none;
+                    background-color: #080808;
+                    border: 0;
+                    margin: 0;
+                }
+            }
+
+
+          ul{
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          float: none;
+          
+            @media @smartphone_port{
+                width: 100%;
+            }
+          
+
+            li{
+              padding: 15px 0px 15px;
+              margin-right: 40px;
+              position: relative;
+
+              @media @smartphone_port{
+                    padding: 10px 0;
+                    text-align: left;
+                    margin-right: 0;
+                }
+
+              &:last-child{
+                margin-right: 0;
+              }
+
+              a{
+                font-family: @gl-font-primary;
+                font-weight: @gl-light-font;
+                font-size: @gl-font-size-base - 1;
+                color: #ffffff;
+                padding: 0;
+                .gl-transition;
+
+                &:hover,
+                &:focus{
+                  background-color: transparent;
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+          }
+        }
+
+        a.gl-btn{
+            float: right;
+            margin-left: 30px;
+            background-color: @gl-bz-btn-color;
+            .gl-transition;
+
+            &:hover{
+                background-color: darken(@gl-bz-btn-color, 10%);
+            }
+
+            @media @smartphone_port {
+                position: absolute;
+                right: 55px;
+                top: 0px;
+            }
+        }
+      }
+    }
+
+    &.minified{
+        position: fixed;
+        padding: 15px 80px 10px;
+        background-color: #000612;
+
+        @media @smartphone_port {
+            padding: 15px 0px 10px;
+          }
+    }
+}

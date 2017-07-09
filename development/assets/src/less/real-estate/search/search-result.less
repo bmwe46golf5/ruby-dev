@@ -1,0 +1,218 @@
+.gl-search-result-wrapper{
+  .gl-featured-items{
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 0px;
+    float: left;
+
+    @media @smartphone_port, @tablet_port{
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .gl-feat-items-img-wrapper{
+      height: 240px;
+
+      @media @smartphone_port, @tablet_port, @tablet_land{
+          height: auto;
+
+          img{
+            position: relative;
+          }
+        }
+    }
+
+    .gl-feat-item-details,
+    .gl-feat-item-metas{
+      background-color: #fff;
+    }
+
+    &.gl-listtype-display{
+      width: 100%;
+      display: table;
+      overflow: hidden;
+
+      @media @tablet_port, @tablet_land{
+            padding: 0px;
+        }
+
+        .gl-feat-items-img-wrapper{
+          height: 220px;
+        }
+
+        .gl-feat-item-details{
+            @media @tablet_port, @tablet_land{
+                padding: 25px 15px 25px 20px;
+            }
+        }
+
+        .gl-feat-item-metas{
+            @media @tablet_port, @tablet_land{
+                padding: 20px;
+            }
+        }
+
+        .gl-sold-label{
+          background-color: @gl-bz-primary-color;
+        }
+
+        .gl-sale-label{
+          background-color: @gl-bz-alt-color-2;
+        }
+
+        .gl-rent-label{
+          background-color: @gl-bz-alt-color-1;
+        }
+      }
+    }
+}
+
+// Map Top
+.gl-search-style-map-top{
+  .gl-search-result-wrapper{
+    .gl-featured-items{
+      width: 33.333%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      float: left;
+
+      @media @smartphone_port{
+        width: 100%;
+        float: none;
+        padding: 0;
+      }
+
+      @media @tablet_port{
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        float: left;
+      }
+
+      @media @tablet_land{
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        float: left;
+      }
+
+      // @media @smartphone_land{
+      //   width: 50%;
+      //   padding: 0 15px;
+      //   margin-bottom: 30px;
+      //   float: left;
+      // }
+
+      .gl-feat-items-img-wrapper{
+        @media @tablet_land{
+            height: auto;
+        }
+      }
+
+      &:nth-child(n+4){
+        @media @smartphone_port, @tablet_port, @tablet_land{
+            margin-top: 0
+        }
+      }
+    }
+  }
+}
+
+.gl-search-style-map-left,
+.gl-search-style-map-right{
+  .gl-search-result-wrapper{
+    .gl-featured-items{
+      width: 50%;
+      padding: 0 15px;
+      float: left;
+      margin-bottom: 0;
+
+      @media @smartphone_port{
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        &:last-child{
+            margin-bottom: 0
+        }
+      }
+
+      @media @tablet_port{
+        width: 100%;
+        padding: 0 15px;
+        float: left;
+
+        &:nth-child(n+1){
+            margin-top: 30px;
+        }
+      }
+
+      @media @tablet_land{
+        width: 100%;
+        padding: 0 15px;
+        float: left;
+
+        &:nth-child(n+1){
+            margin-top: 30px;
+        }
+      }
+
+      .gl-feat-items-img-wrapper{
+        @media @tablet_land{
+            height: auto;
+        }
+      }
+    }
+  }
+}
+
+
+// Search Map Left
+.gl-search-style-map-left {
+  .gl-search-result-wrapper{
+    padding: 0 15px;
+  }
+}
+
+// Search Map Right
+.gl-search-style-map-right {
+  .gl-search-result-wrapper{
+    padding: 0 15px;
+    @media @smartphone_port, @tablet_port, @tablet_land{
+        margin-bottom: 30px;
+    }
+  }
+}
+
+// Search Map Top
+.gl-search-style-map-top {
+  .gl-search-result-wrapper{
+    @media @smartphone_port, @tablet_port, @tablet_land{
+        padding: 0 15px;
+    }
+  }
+}
+
+.gl-alt-search{
+    &:nth-child(n+3){
+        margin-top: 30px
+      }
+      @media @smartphone_port, @tablet_port, @tablet_land{
+            &:nth-child(n+1){
+                margin-top: 30px
+            }
+        }
+
+    &.gl-listtype-display{
+      &:nth-child(n+2){
+        margin-top: 30px
+      }
+      @media @smartphone_port, @tablet_port, @tablet_land{
+            &:nth-child(n+1){
+                margin-top: 30px
+            }
+        }
+    }
+}

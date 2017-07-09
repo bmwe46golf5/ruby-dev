@@ -1,0 +1,101 @@
+.gl-sidebar-job-meta{
+  background-color: #f5fdfc;
+  padding: 65px 45px;
+
+  @media @smartphone_port, @tablet_port{
+        padding: 35px 20px;
+    }
+
+    @media @tablet_land{
+        padding: 45px 30px;
+    }
+
+  ul{
+    display: block;
+    overflow: hidden;
+
+    li{
+      position: relative;
+      display: block;
+      overflow: hidden;
+      padding-left: 40px;
+      margin-bottom: 20px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      span.gl-job-meta-title{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base + 2;
+        font-weight: @gl-normal-font;
+        color: @gl-heading-base-color;
+        line-height: 24px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        margin-right: 15px;;
+      }
+
+      span.gl-job-meta-text{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        line-height: 24px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+      }
+
+      span.gl-item-status-label{
+        margin-top: 3px;;
+      }
+
+      &:before{
+        content: '';
+        font-family: @ionicons-font-family;
+        font-size: 21px;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        line-height: 1;
+      }
+
+      &.gl-job-meta-location{
+        &:before{
+          content: @ionicon-var-ios-location-outline;
+        }
+      }
+
+      &.gl-job-meta-joindate{
+        &:before{
+          content: @ionicon-var-calendar;
+        }
+      }
+
+      &.gl-job-meta-jobtype{
+        &:before{
+          content: @ionicon-var-android-list;
+        }
+      }
+
+      &.gl-job-meta-level{
+        &:before{
+          content: @ionicon-var-erlenmeyer-flask;
+        }
+      }
+
+      &.gl-job-meta-salary{
+        &:before{
+          content: @fa-var-money;
+          font-family: 'FontAwesome';
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+}

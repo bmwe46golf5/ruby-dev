@@ -1,0 +1,163 @@
+.gl-popular-cat-section{
+  background-color: @gl-page-background;
+  .gl-popular-cat-wrapper{
+      display: block;
+      overflow: hidden;
+
+      .gl-popular-cat-item{
+          width: calc(~"100% / 3 - 60px / 3");
+          height: 310px;
+          float: left;
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          img{
+              max-width: 100%;
+          }
+
+          @media @smartphone_port{
+              width: calc(~"100% - 25px");
+              height: auto;
+          }
+
+          @media @smartphone_land{
+              width: calc(~"100% / 2 - 25px");
+              height: 240px;
+          }
+
+          @media @tablet_port{
+              width: calc(~"50% - 20px");
+              height: 160px;
+          }
+
+          @media @tablet_land{
+              height: 220px;
+          }
+
+          &.gl-dbl-width{
+            width: calc(~"100% / 3 * 2 - 60px / 3");
+            
+            @media @smartphone_port{
+                  width: calc(~"100% - 25px");
+                  height: auto;
+
+                  img{
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+                  }
+              }
+
+              @media @tablet_port{
+                  width: calc(~"100% - 20px");
+                  height: 160px;
+              }
+              @media @tablet_land{
+                  height: 220px;
+              }
+          }
+
+          &.gl-dbl-height{
+            height: 310px * 2 + 20 ;
+
+            @media @smartphone_port{
+                  height: 240px * 2 + 20;
+              }
+
+            @media @tablet_port{
+                  height: 160px * 2 + 20;
+              }
+
+              @media @tablet_land{
+                  height: 220px * 2 + 20;
+              }
+          }
+
+          img{
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              -webkit-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                 -moz-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                   -ms-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                      -o-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                          transition: all .8s cubic-bezier(.28,.75,.25,1);
+
+              @media @smartphone_port{
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+              }
+
+          }
+
+          a.gl-overlay-effect{
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,.69) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,.69) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,.69) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+              p.gl-popular-cat-listing{
+                  font-family: @gl-font-heading;
+                  letter-spacing: 1px;
+                  position: absolute;
+                  bottom: 35px;
+                  left: 45px;
+                  margin-bottom: 0;
+
+                  span.gl-popular-cat-title{
+                      color: #ffffff;
+                      font-size: @gl-font-size-base + 6;
+                      font-weight: @gl-normal-font;
+                      display: block;
+                      overflow: hidden;
+                  }
+
+                  span.gl-listing-num{
+                      color: @gl-bz-primary-color;
+                      font-size: @gl-font-size-base;
+                      font-weight: @gl-bold-font;
+                      display: block;
+                      overflow: hidden;
+                      position: relative;
+
+                      span{
+                          color: #ffffff;
+                          &:before{
+                              content: '/ ';
+                          }
+                      }
+                  }
+              }
+          }
+
+          &:hover {
+              img{
+                  -webkit-transform: scale(1.04) translate3d(0,0,0);
+                     -moz-transform: scale(1.04) translate3d(0,0,0);
+                      -ms-transform: scale(1.04) translate3d(0,0,0);
+                       -o-transform: scale(1.04) translate3d(0,0,0);
+                          transform: scale(1.04) translate3d(0,0,0);
+              }
+          }
+      }
+  }
+}

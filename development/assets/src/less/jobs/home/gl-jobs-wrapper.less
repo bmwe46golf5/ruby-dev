@@ -1,0 +1,131 @@
+.gl-available-section{
+  background-color: #f5fdfc;
+}
+
+.gl-job-display-wrapper{
+  .gl-job-tabs-nav{
+    text-align: center;
+    display: block;
+    // overflow: hidden;
+    border-bottom: 2px solid rgba(74, 197, 182, 0.1);
+
+    .nav-tabs {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      padding-bottom: 20px;
+      position: relative;
+      border-bottom: 0px solid;
+
+      li{
+        margin-right: 30px;
+        line-height: 1;
+        position: relative;
+
+        @media @smartphone_port{
+            margin-right: 0;
+            float: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &:last-child{
+          margin: 0;
+        }
+
+        a {
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: #bababa;
+          padding: 0;
+          margin-right: 0px;
+          line-height: 1.42857143;
+          border: 0px solid transparent;
+          border-radius: 0px 0px 0 0;
+          background-color: transparent;
+        }
+      }
+
+      li.active {
+        &:after{
+          content: '';
+          width: 100%;
+          height: 2px;
+          display: block;
+          overflow: hidden;
+          background-color: @gl-bz-primary-color;
+          position: absolute;
+          bottom: -27px;
+          left: 0;
+
+          @media @smartphone_port{
+                bottom: -5px;
+            }
+        }
+
+        a,
+        a:hover,
+        a:focus {
+          font-weight: @gl-normal-font;
+          color: @gl-text-base-color;
+          background-color: transparent;
+          border: 0px solid #ddd;
+          border-bottom-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .gl-job-tab-body{
+    
+      .gl-job-list-details{
+
+        > .panel-body,
+        > .list-group{
+            border: 0px solid;
+
+          .gl-jobdetails-sec{
+
+            .gl-apply-job{
+                background-color: @gl-bz-primary-color;
+
+                &:hover{
+                  background-color: darken(@gl-bz-primary-color, 10%);
+                }
+              }
+
+              .gl-details-job{
+                background-color: @gl-bz-alt-color-1;
+
+                &:hover{
+                  background-color: darken(@gl-bz-alt-color-1, 10%);
+                }
+              }
+          }
+        }
+      }
+    }
+
+    a.gl-btn{
+      background-color: @gl-bz-primary-color;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 10%);
+      }
+    }
+}
+
+
+.full-time-job{
+  background-color: @gl-bz-alt-color-1;
+}
+
+.part-time-job{
+  background-color: @gl-bz-alt-color-2;
+}
+
+.remote-job{
+  background-color: @gl-bz-alt-color-3;
+}

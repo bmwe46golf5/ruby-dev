@@ -1,0 +1,77 @@
+.gl-address-col{
+  width: 50%;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+  overflow: hidden;
+  @media @smartphone_port, @tablet_port{
+    width: 100%;
+    display: block;
+    float: none;
+    margin-bottom: 50px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .gl-address{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 70px;
+    padding-right: 60px;
+
+    &:last-child{
+      margin: 0;
+    }
+    @media @smartphone_port, @tablet_port{
+      padding-right: 0;
+      margin-bottom: 50px;
+    }
+
+    ul{
+      li{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 15px;
+
+        &:before{
+          content: '';
+          font-family: @ionicons-font-family;
+          color: @gl-text-base-color;
+          font-size: 18px;
+          padding-left: 2px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+      li.gl-address-location{
+        &:before{
+          content: '\f455';
+        }
+      }
+
+      li.gl-address-phone{
+        &:before{
+          content: '\f4b9';
+        }
+      }
+
+      li.gl-address-email{
+        &:before{
+          content: '\f422';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.gl-realestate-template{
+  .gl-cta-section{
+      background-color: #fff;
+
+    .gl-cta-content-wrapper{
+      padding: 0 100px;
+      @media @smartphone_port, @smartphone_land, @tablet_port, @tablet_land{
+        padding: 0 15px;
+      }
+
+      p{
+        padding-top: 7px;
+        @media @tablet_port{
+          width: 100%;
+          display: block;
+          text-align: center;
+          margin-bottom: 25px;
+          padding: 0;
+        }
+
+        @media @tablet_land{
+          padding-top: 5px;
+          float: left;
+        }
+      }
+
+      @media @tablet_land{
+        padding: 0px;
+      }
+
+      form{
+        float: right;
+        
+        @media @tablet_port{
+          display: block;
+          text-align: center;
+          float: none;
+        }
+
+        @media @tablet_land{
+          float: right;
+        }
+        input:not([type='submit']){
+          @media @tablet_port{
+            float: none;
+          }
+        }
+        .gl-location-dropdown{
+          @media @tablet_port{
+            float: none;
+          }
+        }
+        input.gl-btn{
+          background-color: @gl-bz-primary-color;
+
+          &:hover{
+            background-color: darken(@gl-bz-primary-color, 10%)
+          }
+        }
+      }
+    }
+  }
+}

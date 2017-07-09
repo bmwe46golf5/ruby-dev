@@ -1,0 +1,40 @@
+body.gl-blog-page{
+  background-color: @gl-page-background;
+
+  .gl-page-content-section{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    display: block;
+    overflow: hidden;
+
+    .gl-blog-details-wrapper{
+      padding: 0 165px;
+
+      @media @smartphone_port{
+            padding: 0 15px;
+        }
+
+        @media @tablet_port{
+            padding: 0 80px;
+        }
+    }
+  }
+}
+
+.gl-page-header-wrapper{
+  .gl-breadcumb{
+    a{
+      &:hover{
+        color: @gl-bz-primary-color;
+      }
+    }
+  }
+}
+
+.gl-blog-sec-title{
+  font-family: @gl-font-primary;
+  font-size: @gl-font-size-h3;
+  font-weight: @gl-normal-font;
+  color: @gl-heading-base-color;
+  margin: 0 0 35px
+}

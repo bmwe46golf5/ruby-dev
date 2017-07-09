@@ -1,0 +1,118 @@
+header.gl-header{
+  .gl-header-bottombar{
+    .gl-header-main-menu{
+      .container-fluid{
+        .gl-menu-wrapper{
+          ul{
+            li{
+              a{
+                &:hover,
+                &:focus{
+                  color: @gl-bz-primary-color;
+                }
+              }
+
+              &.active:after{
+                content: '';
+                background-color: @gl-bz-primary-color;
+              }
+
+              &.active a{
+                color: @gl-bz-primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.gl-page-content-section{
+  display: block;
+  overflow: hidden;
+
+  .gl-inner-section{
+    &:first-child{
+      padding-top: 35px;
+    }
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+.gl-inner-section{
+  display: block;
+  overflow: hidden;
+  padding-top: 110px;
+  padding-bottom: 100px;
+
+  h3.gl-single-title{
+    font-family: @gl-font-primary;
+    font-size: @gl-font-size-h3;
+    font-weight: @gl-normal-font;
+    color: @gl-heading-base-color;
+    margin: 0 0 35px;
+  }
+
+  p{
+    font-family: @gl-font-primary;
+    font-size: @gl-font-size-base - 1;
+    font-weight: @gl-light-font;
+    color: @gl-text-base-color;
+    margin: 0 0 20px;
+    line-height: 1.5;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+h3.gl-single-title{
+  font-family: @gl-font-primary;
+  font-size: @gl-font-size-h3;
+  font-weight: @gl-normal-font;
+  color: @gl-heading-base-color;
+  margin: 0 0 35px;
+}
+
+.gl-page-img-wrapper {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.gl-section-headings {
+  margin-bottom: 70px;
+}
+
+.gl-left-side{
+  padding-right: 30px;
+  @media @smartphone_port{
+    padding-right: 15px;
+    margin-bottom: 50px;
+  }
+  @media @tablet_port{
+    padding-right: 15px;
+  }
+}
+
+.gl-right-side{
+  padding-left: 30px;
+  @media @smartphone_port, @tablet_port{
+    padding-left: 15px;
+  }
+}
+
+#scrollUp {
+    background-color: @gl-bz-primary-color;
+}
+
+
+

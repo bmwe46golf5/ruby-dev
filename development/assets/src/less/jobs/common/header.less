@@ -1,0 +1,48 @@
+header.gl-header{
+  .gl-header-bottombar{
+    @media @smartphone_port{
+        .icon-bar{
+            background-color: @gl-bz-primary-color;
+        }
+    }
+
+    @media @tablet_port{
+      .icon-bar{
+          background-color: @gl-bz-primary-color;
+        }
+    }
+    
+    .gl-header-main-menu{
+      .container-fluid{
+        .gl-menu-wrapper{
+          ul{
+            li{
+              a{
+                &:hover,
+                &:focus{
+                  color: @gl-bz-primary-color;
+                }
+              }
+
+              &.active:after{
+                content: '';
+                background-color: @gl-bz-primary-color;
+              }
+
+              ul.gl-sub-menu{
+                li{
+                  a{
+                    &:hover,
+                    &:focus{
+                      color: @gl-bz-primary-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

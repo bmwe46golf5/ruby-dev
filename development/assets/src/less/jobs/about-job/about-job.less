@@ -1,0 +1,44 @@
+.gl-page-content-section {
+    .gl-about-job{
+       margin-bottom: 0;
+      .gl-btns-wrapper{
+        text-align: left;
+
+        .gl-btn{
+          float: left;
+
+          &.gl-apply-job{
+            background-color: @gl-bz-primary-color;
+            margin-right: 10px;
+
+            @media @smartphone_port{
+                margin-bottom: 10px;
+            }
+
+            @media @smartphone_land{
+                margin-bottom: 0px;
+            }
+
+            &:hover{
+              background-color: darken(@gl-bz-primary-color, 10%);
+            }
+          }
+
+          &.gl-linkedin-btn{
+            background-color: @gl-bz-alt-color-4;
+
+            &:hover{
+              background-color: darken(@gl-bz-alt-color-4, 10%);
+            }
+          }
+        }
+      }
+      
+      .gl-content-title{
+        margin-top: 30px !important;
+        &:first-child{
+          margin-top: 0;
+        }
+      }
+   }
+}

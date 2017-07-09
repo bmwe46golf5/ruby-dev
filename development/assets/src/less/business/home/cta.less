@@ -1,0 +1,29 @@
+.gl-cta-parallax{
+  background: url("@{gl-img-root}parallax-img.jpg") no-repeat center center;
+  background-attachment: fixed;
+  position: relative;
+
+  &:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: rgba(34,34,34,0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.gl-cta-section{
+  .gl-cta-content-wrapper{
+    p{
+      span.gl-bold-font{
+        color: @gl-heading-base-color;
+      }
+    }
+  }
+}

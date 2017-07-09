@@ -1,0 +1,122 @@
+.gl-search-style-map-left{
+    .gl-search-meta-wrapper{
+      display: table;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      padding: 0 30px;
+
+      @media @smartphone_port, @tablet_port{
+            display: block;
+            padding: 0 15px;
+            text-align: center;   
+        }
+
+      p{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        margin: 0;
+        padding-right: 50px;
+        display: inline-block;
+        float: left;
+
+        @media @smartphone_port, @tablet_port{
+            display: block;
+            margin-bottom: 15px;
+            padding-right: 0;
+            float: none;
+            text-align: center;
+        }
+
+        @media @tablet_land{
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+            padding-right: 20px;
+        }
+      }
+
+      .gl-search-tags{
+        display: inline-block;
+        text-align: left;
+        float: left;
+
+        @media @smartphone_port, @tablet_port{
+            display: block;
+            overflow: hidden;
+            margin-bottom: 10px;
+            float: none;
+            text-align: center;
+        }
+
+        @media @tablet_land{
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+        }
+
+        a.gl-tag-btn{
+
+            @media @smartphone_port, @tablet_port, @tablet_land{
+                 float: none;
+            }
+
+          &:nth-child(1){
+            background-color: rgba(34,168,244,0.10);
+            color: #22a8f4
+          }
+
+          &:nth-child(2){
+            background-color: rgba(255,141,69,0.10);
+            color: #ff8d3b
+          }
+
+          &:nth-child(3){
+            background-color: rgba(157,49,197,0.10);
+            color: #9d31c5
+          }
+
+          &:nth-child(4){
+            background-color: rgba(74,197,182,0.10);
+            color: #4ac5b6
+          }
+
+          &:nth-child(5){
+            background-color: rgba(237,52,174,0.10);
+            color: #ed34ae
+          }
+
+          &:nth-child(6){
+            background-color: rgba(52,104,137,0.10);
+            color: #3468ed
+          }
+        }
+      }
+
+      a.gl-reset-btn{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-bz-primary-color;
+        display: inline-block;
+        float: right;
+
+        @media @smartphone_port, @tablet_port{
+            display: inline-block;
+            overflow: hidden;
+            float: none;
+            text-align: center;
+        }
+
+        @media @tablet_land{
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+            text-align: right;
+        }
+      }
+    }
+}

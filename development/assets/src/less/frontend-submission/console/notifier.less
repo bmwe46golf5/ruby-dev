@@ -1,0 +1,81 @@
+/***********************
+NOTIFICATION WIDGET
+***********************/
+.up-redq-notification-widgets{
+    overflow: hidden;
+    position: relative;
+    padding: 20px 80px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+
+    @media @smartphone_port{
+        padding: 20px 40px;
+    }
+
+    @media @smartphone_land{
+        padding: 20px 50px;
+    }
+
+    &:before{
+        content: '\e996';
+        font-family: 'micons';
+        font-size: @rq-up-fs-base + 7;
+        color: @rq-up-color-gray;
+        line-height: 1;
+        position: absolute;
+        left: 35px;
+
+        @media @smartphone_port{
+            left: 11px;
+            font-size: @rq-up-fs-base + 5;
+        }
+
+        @media @smartphone_land{
+            left: 15px
+        }
+    }
+
+    p{
+        font-size: @rq-up-fs-base;
+        color: @rq-up-fc-default;
+        font-weight: @rq-up-fw-normal;
+        margin: 0;
+        line-height: 1.5;
+
+        a{
+            color: @rq-up-primary-color;
+            font-weight: @rq-up-fw-bold;
+            .gl-transition;
+
+            &:hover{
+                color: darken(@rq-up-primary-color, 5%);
+            }
+        }
+    }
+
+    button{
+        font-size: @rq-up-fs-base +  8;
+        color: @rq-up-color-gray;
+        background-color: transparent;
+        padding: 0 5px;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        right: 35px;
+        line-height: 1;
+        top: calc(~"50% - 11.5px");
+        .gl-transition;
+
+        &:hover{
+            color: @rq-up-primary-color;
+        }
+
+        @media @smartphone_port{
+            right: 10px;
+        }
+
+        @media @smartphone_land{
+            right: 15px
+        }
+    }
+}

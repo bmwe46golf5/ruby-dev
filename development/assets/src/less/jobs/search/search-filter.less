@@ -1,0 +1,172 @@
+.gl-search-expand-btn{
+    background-color: @gl-bz-primary-color;
+}
+
+// Map Top
+.gl-search-style-map-top{
+  .gl-search-filter-bar{
+    background-color: @gl-review-wrapper-bg;
+    .gl-search-filter-wrapper{
+      form{
+        .gl-search-inputs-box{
+            .gl-filter-options{
+              background-color: #ecfcfa;
+
+              &.gl-search-location{
+                 &:after{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+
+            .gl-search-category{
+              background-color: #ecfcfa;
+
+              .select2-container{
+                background-color: #ecfcfa;
+                .select2-selection--single{
+                  background-color: #ecfcfa;
+                }
+              }
+            }
+
+            .gl-range-wrapper{
+              .gl-range-slider {
+                .irs-line {
+                  background-color: @gl-bz-primary-color;
+                }
+
+                .irs-bar,
+                .irs-bar-edge {
+                  background: @gl-bz-primary-color;
+                }
+
+                .irs-slider {
+                    border-color: @gl-bz-primary-color !important;
+                }
+
+                .irs-from, .irs-to, .irs-single {
+                  background-color: @gl-bz-primary-color;
+
+                  &:before{
+                    content: '';
+                    border-color: transparent transparent @gl-bz-primary-color transparent;
+                  }
+                }
+              }
+            }
+        }
+
+        .gl-btn{
+          background: #fff10e; /* Old browsers */
+          background: -moz-linear-gradient(top,  #fff65c 0%, #fff10e 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top,  #fff65c 0%,#fff10e 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom,  #fff65c 0%,#fff10e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff65c', endColorstr='#fff10e',GradientType=0 ); /* IE6-9 */
+        }
+      }
+    }
+  }
+}
+
+// MAP LEFT
+.gl-search-style-map-left{
+  .gl-search-filter-wrapper{
+    form{
+      .gl-filter-options{
+        &.gl-search-location{
+           &:after{
+            color: @gl-bz-primary-color;
+          }
+        }
+      }
+
+      .gl-range-wrapper{
+          .gl-range-slider {
+            .irs-line {
+              background-color: @gl-bz-primary-color;
+            }
+
+            .irs-bar,
+            .irs-bar-edge {
+              background: @gl-bz-primary-color;
+            }
+
+            .irs-slider {
+              border-color: @gl-bz-primary-color !important;
+            }
+
+            .irs-from, .irs-to, .irs-single {
+              background-color: @gl-bz-primary-color;
+
+              &:before{
+                border-color: transparent transparent @gl-bz-primary-color transparent;
+              }
+            }
+          }
+        }
+
+      .gl-btn{
+        background-color: @gl-bz-primary-color;
+      }
+    }
+  }
+}
+
+// MAP RIGHT
+.gl-search-style-map-right{
+  &.gl-search-style-alt{
+    .gl-search-filter-bar{
+      .gl-search-filter-wrapper{
+        form{
+          .gl-search-inputs-box{
+            .gl-filter-options{
+              &.gl-search-location{
+                 &:after{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+
+            .gl-search-category{
+              .select2-container{
+                  background-color: #ffffff;
+
+                  .select2-selection--single{
+                    background-color: #ffffff;                
+                  }
+                }
+            }
+
+            .gl-range-wrapper{
+              .gl-range-slider {
+                .irs-line {
+                  background-color: @gl-bz-primary-color;
+                }
+
+                .irs-bar,
+                .irs-bar-edge {
+                  background: @gl-bz-primary-color;
+                }
+
+                .irs-slider {
+                  border: 3px solid @gl-bz-primary-color;
+                }
+
+                .irs-from, .irs-to, .irs-single {
+                  background-color: #ffffff;
+                  color: @gl-text-base-color
+                }
+              }
+            }
+          }
+          .gl-btn{
+              background-color: @gl-bz-primary-color;
+              color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+.gl-post-metas{
+  display: block;
+  overflow: hidden;
+  margin-bottom: 60px;
+
+  .gl-tag-wrapper{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    overflow: hidden;
+    float: left;
+
+    @media @smartphone_port{
+        display: block;
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    a{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-normal-font;
+      color: #bababa;
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+      padding: 10px 15px;
+      line-height: 1;
+      background-color: #fff;
+      .gl-border-radius(3px);
+      .gl-transition;
+
+      &:hover{
+        color: #ffffff;
+        background-color: @gl-bz-primary-color;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  .gl-share-btn{
+    float: right;
+    background-color: @gl-bz-alt-color-1;
+    color: #ffffff;
+
+    @media @smartphone_port{
+        float: none;
+    }
+
+    &:hover{
+      background-color: darken(@gl-bz-alt-color-1, 10%);
+    }
+  }
+}

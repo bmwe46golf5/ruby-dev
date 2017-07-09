@@ -1,0 +1,152 @@
+.gl-cta-section{
+  background: url("@{gl-img-root}cta-img.jpg") no-repeat center center;
+  position: relative;
+
+  @media @smartphone_port, @tablet_port{
+    background-size: cover;
+  }
+
+  // &:before{
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   display: block;
+  //   overflow: hidden;
+  //   background-color: rgba(34,34,34,0.9);
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  // }
+
+  .gl-cta-content-wrapper{
+    position: relative;
+    z-index: 10;
+    padding: 0 100px;
+
+    @media @smartphone_port{
+      padding: 0 15px;
+    }
+
+    @media @tablet_land{
+      padding: 0 30px;
+    }
+
+    p{
+      width: auto;
+      margin-right: 40px;
+      padding-top: 5px;
+      color: #ffffff;
+      padding-right: 0;
+
+      @media @smartphone_port{
+        text-align: center;
+      }
+
+      @media @tablet_port{
+        margin-bottom: 20px;
+      }
+
+      @media @tablet_land{
+        float: left;
+      }
+    }
+
+    form{
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+
+      @media @tablet_land{
+        float: right;
+      }
+
+      input:not([type='submit']){
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        width: 210px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        margin-right: 10px;
+        border: 0px solid;
+        outline: 0;
+        background-color: #ffffff;
+        .gl-border-radius(3px);
+
+        @media @smartphone_port{
+          width: 100%;
+        }
+
+        @media @tablet_land{
+          width: 180px;
+        }
+
+      }
+
+      .gl-location-dropdown{
+        width: 210px;
+        height: 40px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        margin-right: 10px;
+
+        @media @smartphone_port{
+          width: 100%;
+        }
+
+        @media @tablet_land{
+          width: 180px;
+        }
+
+        .select2-container{
+          padding: 0 25px;
+          height: 100%;
+          margin-top: 0;
+          background-color: #fff;
+          .gl-border-radius(3px);
+
+          .select2-selection--single{
+            height: 100%;
+
+            .select2-selection__rendered{
+              line-height: 40px;
+            }
+
+            .select2-selection__arrow{
+              height: 40px;
+              top: 0;
+
+              b{
+                line-height: 40px;
+              }
+            }
+          }
+        }
+      }
+
+      input.gl-btn{
+        color: @gl-heading-base-color;
+        padding: 0 30px;
+        height: 40px;
+        background-color: @gl-bz-primary-color;
+
+        &:hover{
+          background-color: darken(@gl-bz-primary-color, 10%)
+        }
+      }
+
+
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.gl-sidebar-widget{
+  width: 100%;
+  .gl-featured-items{
+    display: block;
+    margin-bottom: 40px;
+    padding: 0;
+
+    @media @smartphone_port{
+        margin-bottom: 50px;
+    }
+
+    .gl-feat-items-img-wrapper{
+      @media @smartphone_port, @tablet_land{
+          height: 180px;
+      }
+      @media @smartphone_land{
+          height: 220px;
+      }
+
+      @media @tablet_port{
+          height: 160px;
+      }
+    }
+
+    .gl-feat-item-details,
+    .gl-feat-item-metas{
+      background-color: #fff;
+      border-color: #ededed;
+    }
+
+    .gl-sold-label{
+      background-color: @gl-bz-primary-color;
+    }
+
+    .gl-sale-label{
+      background-color: @gl-bz-alt-color-2;
+    }
+
+    .gl-rent-label{
+      background-color: @gl-bz-alt-color-1;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

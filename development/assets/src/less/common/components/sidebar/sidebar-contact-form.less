@@ -1,0 +1,51 @@
+.gl-sidebar-contact-form{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 35px;
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+
+  form{
+    input:not([type = 'submit']){
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: #bababa;
+      width: 100%;
+      height: 48px;
+      line-height: 46px;
+      padding: 0 15px;
+      display: block;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+      outline: 0;
+      margin-bottom: 15px;
+      background-color: transparent;
+    }
+
+    textarea{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: #bababa;
+      width: 100%;
+      padding: 10px 15px;
+      display: block;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+      outline: 0;
+      margin-bottom: 15px;
+      background-color: transparent;
+    }
+
+    input.gl-btn{
+      background-color: @gl-bz-primary-color;
+      color: #ffffff;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 5%);
+      }
+    }
+  }
+}

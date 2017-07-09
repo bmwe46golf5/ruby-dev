@@ -1,0 +1,55 @@
+/*
+FOOTER
+*/
+.up-redq-floating-fixed-wrapper{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: row; /* Safari */
+    flex-direction:         row;
+    -webkit-justify-content: flex-end;
+   justify-content: flex-end;
+    -webkit-align-items: center; /* Safari */
+    align-items:         center;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 45px;
+    background-color: #ffffff;
+    border-top: 1px solid @rq-up-border-color;
+
+    @media @smartphone_port{
+      position: relative;
+    }
+
+    .up-redq-preview-btn{
+        font-size: @rq-up-fs-base;
+        font-weight: @rq-up-fw-bold;
+        color: @rq-up-fc-default;
+        margin-right: auto;
+        .gl-transition;
+
+        &:hover{
+            color: @rq-up-primary-color;
+        }
+    }
+
+    .up-redq-option-btn,
+    .up-redq-msgsend-btn{
+        font-size: @rq-up-fs-base;
+        font-weight: @rq-up-fw-bold;
+        color: #fff;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 35px;
+        border: 0;
+        outline: 0;
+        background-color: @rq-up-primary-color;
+        .gl-transition;
+        .gl-border-radius(5px);
+
+        &:hover{
+            background-color: darken(@rq-up-primary-color, 3%);
+        }
+    }
+}

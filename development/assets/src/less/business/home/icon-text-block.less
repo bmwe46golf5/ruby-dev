@@ -1,0 +1,39 @@
+.gl-service-section-wrapper{
+  .gl-icon-top-with-text{
+    &:nth-child(1){
+      .gl-icon-wrapper{
+        background-color: @gl-bz-primary-color;
+
+        &:after{
+          content: '';
+          display: none;
+          border-color: @gl-bz-primary-color transparent transparent transparent;
+        }
+      }
+    }
+
+    &:nth-child(2){
+      .gl-icon-wrapper{
+        background-color: @gl-bz-alt-color-1;
+
+        &:after{
+          content: '';
+          display: none;
+          border-color: @gl-bz-alt-color-1 transparent transparent transparent;
+        }
+      }
+    }
+
+    &:nth-child(3){
+      .gl-icon-wrapper{
+        background-color: @gl-bz-alt-color-2;
+
+        &:after{
+          content: '';
+          display: none;
+          border-color: @gl-bz-alt-color-2 transparent transparent transparent;
+        }
+      }
+    }
+  }
+}

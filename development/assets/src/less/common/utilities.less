@@ -1,0 +1,45 @@
+// TRANSITION
+.gl-transition (@time : .35s){
+  -webkit-transition: all @time ease;
+     -moz-transition: all @time ease;
+      -ms-transition: all @time ease;
+       -o-transition: all @time ease;
+          transition: all @time ease;
+}
+
+.gl-baziar-transition (@btime : .8s){
+  -webkit-transition: all @btime cubic-bezier(.28,.75,.25,1);
+     -moz-transition: all @btime cubic-bezier(.28,.75,.25,1);
+       -ms-transition: all @btime cubic-bezier(.28,.75,.25,1);
+          -o-transition: all @btime cubic-bezier(.28,.75,.25,1);
+              transition: all @btime cubic-bezier(.28,.75,.25,1);
+}
+
+// BORDER RADIUS
+.gl-border-radius (@radius : 5px 5px 5px 5px){
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+
+// DROP SHADOW
+.gl-drop-shadow (@values){
+  -webkit-box-shadow: @values;
+     -moz-box-shadow: @values;
+          box-shadow: @values;
+}
+
+// Transparent Color
+.gl-transparent-overlay (@r: 0, @g: 0, @b: 0, @a: 0.31){
+  background-color: rgba(@r, @g, @b, @a);
+}
+
+// TRANSFORM
+.gl-transform (@x, @y){
+  -webkit-transform: translate(@x,@y);
+     -moz-transform: translate(@x,@y);
+      -ms-transform: translate(@x,@y);
+       -o-transform: translate(@x,@y);
+          transform: translate(@x,@y);
+}

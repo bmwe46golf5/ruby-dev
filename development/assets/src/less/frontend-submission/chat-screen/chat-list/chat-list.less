@@ -1,0 +1,150 @@
+/*
+Search
+*/
+.up-redq-item-list{
+    background-color: #ffffff;
+    height: 100%;
+    border-right: 1px solid @rq-up-border-color;
+    position: relative;
+    overflow-y: scroll;
+
+    @media @smartphone_port{
+      height: auto !important;
+    }
+
+    .up-redq-single-msg{
+        width: 100%;
+        // padding: 25px 20px;
+        display: block;
+        background-color: #fff;
+        border-bottom: 1px solid @rq-up-border-color;
+        position: relative;
+        overflow: hidden;
+        padding: 25px 20px;
+        cursor: pointer;
+        .gl-transition;
+
+        &:before{
+            content: '';
+            width: 2px;
+            height: calc(~"100% + 1px");
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        // a{
+            
+        //     display: block;
+        //     position: relative;
+        //     overflow: hidden;
+            
+            span.up-user-img{
+                width: 36px;
+                height: 36px;
+                .gl-border-radius(50%);
+                background-color: #e8e8e8;
+                position: relative;
+                margin-right: 20px;
+                float: left;
+                display: inline-block;
+
+                span.up-user-status{
+                    width: 8px;
+                    height: 8px;
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 0;
+                    right: 4px;
+                    .gl-border-radius(50%);
+                    background-color: #e8e8e8;
+
+                    &.up-online{
+                        background-color: @rq-up-online;
+                    }
+
+                    &.up-away{
+                        background-color: @rq-up-away;
+                    }
+                }
+            }
+
+            span.up-msg-wrap{
+                float: left;
+                display: inline-block;
+                width: calc(~"100% - 116px");
+                h3{
+                    font-size: @rq-up-fs-base;
+                    font-weight: @rq-up-fw-bold;
+                    color: @rq-up-fc-default;
+                    margin: 0 0 5px;
+                    display: block;
+
+                    span{
+                        font-size: @rq-up-fs-base;
+                        font-weight: @rq-up-fw-bold;
+                        color: @rq-up-fc-default;
+                        padding-left: 5px;
+                    }
+                }
+
+                span.up-msg-excerpt{
+                    font-size: @rq-up-fs-base - 1;
+                    font-weight: @rq-up-fw-normal;
+                    color: @rq-up-fc-default;
+                    margin: 0 0 5px;
+                    display: block;
+                }
+            }
+
+            span.up-msg-date-notification{
+                float: right;
+                display: inline-block;
+                max-width: 60px;
+                text-align: right;
+
+                button.up-msg-del-btn{
+                    font-size: @rq-up-fs-base - 1;
+                    color: @rq-up-fc-alt;
+                    padding: 0;
+                    background-color: transparent;
+                    border: 0;
+                    outline: 0;
+                    position: absolute;
+                    top: 5px;
+                    right: 15px;
+                    padding: 5px;
+                }
+
+                span.up-msg-post-date{
+                    font-size: @rq-up-fs-base - 1;
+                    font-weight: @rq-up-fw-normal;
+                    color: @rq-up-fc-alt;
+                    margin: 0 0 5px;
+                    display: block;
+                }
+
+                span.up-new-msg-num{
+                    font-size: @rq-up-fs-base - 1;
+                    font-weight: @rq-up-fw-normal;
+                    color: @rq-up-color-red;
+                    margin: 0;
+                    display: block;
+                }
+            }
+        // }
+
+        &.active-msg{
+            background-color: @rq-up-color-light-green;
+            z-index: 1;
+
+            &:before{
+                background-color: @rq-up-color-red;
+            }
+        }
+
+        &:hover{
+            background-color: @rq-up-color-light-green;
+        }
+    }
+}

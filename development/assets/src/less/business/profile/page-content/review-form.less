@@ -1,0 +1,33 @@
+.gl-review-submission{
+  display: block;
+  overflow: hidden;
+  
+  form{
+    fieldset.gl-form-fields{
+      .gl-rating-wrapper{
+        .gl-rating-inputs{
+          .gl-rating-wrap{
+            span{
+              i{
+                &.star-on-png,
+                &.star-half-png{
+                  color: @gl-bz-primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    fieldset.gl-submit-wrapper{
+      input.gl-btn{
+        background-color: @gl-bz-primary-color;
+        color: #ffffff;
+        &:hover{
+          background-color: darken(@gl-bz-primary-color, 5%);
+        }
+      }
+    }
+  }
+}

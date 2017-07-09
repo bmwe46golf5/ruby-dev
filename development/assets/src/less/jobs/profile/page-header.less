@@ -1,0 +1,43 @@
+.gl-page-header-wrapper{
+  background-image: url("@{gl-img-root}page-header-bg.jpg");
+
+  .gl-page-head-btn-wrapper{
+    a.gl-btn{
+      background-color: @gl-bz-primary-color;
+      color: #ffffff;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 10%);
+      }
+
+      &:nth-child(2){
+        color: #ffffff;
+        background-color: @gl-bz-alt-color-1;
+
+        &:hover{
+          background-color: darken(@gl-bz-alt-color-1, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+.gl-apply-job-template .gl-page-header-wrapper{
+  background-image: url("@{gl-img-root}page-header-bg-1.jpg");
+}
+
+.gl-apply-job-template  .gl-page-header-wrapper{
+  .container{
+    h1{
+
+      .gl-item-status-label{
+        top: 15px;
+
+        @media @smartphone_port{
+            top: auto;
+        }
+      }
+    }
+  }
+}

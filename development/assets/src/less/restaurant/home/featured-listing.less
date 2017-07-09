@@ -1,0 +1,50 @@
+.gl-feat-listing-section{
+  background-color: #ffffff;
+  padding-bottom: 110px;
+
+  .gl-featured-listing-wrapper{
+    display: block;
+    overflow: hidden;
+
+    .gl-featured-items{
+      background-color: #ffffff;
+
+      .gl-feat-items-img-wrapper{
+        span.gl-item-rating{
+          position: absolute;
+          right: 30px;
+          top: 30px;
+          color: #ffffff;
+          z-index: 1;
+        }
+      }
+
+      .gl-feat-item-details{
+        h3{
+          a{
+            &:hover{
+              color: @gl-bz-primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gl-more-btn-wrapper{
+    display: block;
+    overflow: hidden;
+    margin-top: 70px;
+    text-align: center;
+    max-height: 44px;
+
+    a{
+      background-color: @gl-bz-primary-color;
+      color: @gl-heading-base-color;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 5%)
+      }
+    }
+  }
+}

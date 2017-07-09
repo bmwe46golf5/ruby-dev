@@ -1,0 +1,55 @@
+.gl-schedule-widget{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+
+  ul{
+    li{
+      width: 100%/3;
+      height: 85px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      background-color: #fef9f1;
+      border: 1px solid #ffffff;
+      padding-top: 25px;
+      text-align: center;
+
+      &:first-child{
+        margin-left: 100%/3;
+      }
+
+      span.gl-schedule-date{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-normal-font;
+        color: @gl-heading-base-color;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 10px;;
+      }
+
+      span.gl-schedule-time{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 3;
+        font-weight: @gl-normal-font;
+        color: @gl-text-base-color;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 0px;
+
+        &.closed{
+          color: @gl-bz-primary-color;
+        }
+      }
+    }
+  }
+}
