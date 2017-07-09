@@ -1,0 +1,340 @@
+.gl-directory-searchbar-section{
+    display: block;
+    position: relative;
+    margin-top: -110px;
+
+    @media @smartphone_port{
+        margin-top: 0;
+    }
+
+    .gl-directory-searchbar{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 0 70px;
+          // background-color: rgba(0,0,0,0.43);
+          background-color: #ffffff;
+          .gl-drop-shadow(0 0 3px rgba(0,0,0,0.15););
+          .gl-transition;
+
+          @media @smartphone_port{
+            padding: 0 15px;
+          }
+
+          &.expanded{
+            background-color: rgba(255,255,255,1);
+          }
+
+          form{
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            overflow: hidden;
+            padding-bottom: 0px;
+            margin-bottom: -5px;
+
+            .gl-regular-search{
+                display: block;
+                overflow: hidden;
+                padding: 35px 0;
+            }
+
+            input{
+              font-family: @gl-font-primary;
+              font-size: @gl-font-size-base - 1;
+              font-weight: @gl-light-font;
+              color: @gl-text-base-color;
+              border: 1px solid #eee;
+              // width: 27.4%;
+              width: calc(~"25% - 10px");
+              height: 40px;
+              padding: 0 20px;
+              background-color: #fff;
+              // border: 0px solid;
+              outline: 0;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              margin: 0 5px;
+              float: left;
+              overflow: hidden;
+              .gl-border-radius(3px);
+
+              &:focus{
+                outline: 0;
+              }
+
+                @media @smartphone_port{
+                    width: 100%;
+                    display: block;
+                    float: none;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .gl-category-dropdown{
+              // width: 27.4%;
+              width: calc(~"25% - 10px");
+              height: 40px;
+              margin: 0 5px;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              float: left;
+
+              @media @smartphone_port{
+                    width: 100%;
+                    display: block;
+                    float: none;
+                    margin-bottom: 10px;
+                }
+
+              .select2-container{
+                  padding: 0 20px 0 20px;
+                  height: 100%;
+                  margin-top: 0;
+                  background-color: #fff;
+                  border: 1px solid #eee;
+                  .gl-border-radius(3px);
+
+                  .select2-selection--single{
+                    height: 100%;
+
+                    .select2-selection__rendered{
+                      line-height: 40px;
+                    }
+
+                    .select2-selection__arrow{
+                      height: 40px;
+                      top: 0;
+
+                      b{
+                        line-height: 40px;
+                      }
+                    }
+                  }
+                }
+            }
+
+            button{
+              font-family: @gl-font-primary;
+              font-size: @gl-font-size-base - 1;
+              font-weight: @gl-bold-font;
+              color: #ffffff;
+              // width: 150px;
+              width: calc(~"25% - 10px");
+              height: 40px;
+              margin: 0 5px;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              overflow: hidden;
+              float: left;
+              text-align: center;
+              border: 0px solid;
+              outline: 0;
+              padding: 0;
+              line-height: 40px;
+              background-color: @gl-bz-alt-color-1;
+              .gl-border-radius(3px);
+              .gl-transition;
+
+              i{
+                font-size: 18px;
+                margin-right: 20px;
+                color: @gl-heading-base-color;
+              }
+
+              &:hover{
+                background-color: darken(@gl-bz-alt-color-1, 10%);
+              }
+
+                @media @smartphone_port{
+                    width: 100%;
+                    display: block;
+                    float: none;
+                }
+            }
+
+            .gl-advanced-search-wrapper{
+                display: none;
+                overflow: hidden;
+                padding: 0 0 25px;
+
+                input{
+                    width: calc(~"25% - 10px");
+                    margin-bottom: 10px;
+
+                    @media @smartphone_port{
+                        width: 100%;
+                        display: block;
+                        float: none;
+                    }
+                }
+
+                .gl-range-wrapper{
+                  background-color: #ffffff;
+                  padding: 0 20px;
+                  width: calc(~"25% - 10px");
+                  display: inline-block;
+                  *display: inline;
+                  *zoom: 1;
+                  float: left;
+                  .gl-border-radius(3px);
+                  margin: 0 5px;
+
+                  @media @smartphone_port{
+                        width: 100%;
+                        display: block;
+                        float: none;
+                    }
+
+                  span.gl-filter-inp-title,
+                  span.gl-range-value{
+                    font-family: @gl-font-primary;
+                    font-size: @gl-font-size-base - 1;
+                    font-weight: @gl-light-font;
+                    color: @gl-text-base-color;
+                    padding-right: 10px;
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    float: left;
+                  }
+
+                  span.gl-range-value{
+                    color: @gl-bz-primary-color;
+                    padding-right: 0;
+                    float: right;
+                  }
+
+                  .gl-range-slider {
+                    width: 100%;
+                    height: 40px;
+                    display: block;
+
+                    .irs {
+                      height: 40px;
+                    }
+
+                    .irs-line {
+                      height: 4px;
+                      top: 19px;
+                      left: 0;
+                      position: absolute;
+                      width: 100%;
+                      background-color:#c3ece7;
+                      .gl-border-radius(2px)
+                    }
+
+                    .irs-bar,
+                    .irs-bar-edge {
+                      background: #c3ece7;
+                    }
+
+                    .irs-bar {
+                      height: 4px;
+                      top: 19px;
+                    }
+
+                    .irs-bar-edge {
+                      top: 19px;
+                      height: 4px;
+                      width: 11px;
+                    }
+
+                    .irs-slider {
+                      width: 12px;
+                      height: 12px;
+                      background-color: #ffffff;
+                      top: 15px;
+                      border: 3px solid #c3ece7;
+                      -webkit-border-radius: 6px;
+                         -moz-border-radius: 6px;
+                           -o-border-radius: 6px;
+                              border-radius: 6px;
+                    }
+
+                    .irs-from,
+                    .irs-to,
+                    .irs-single {
+                      font-family: @gl-font-primary;
+                      font-size: @gl-font-size-base - 4;
+                      font-weight: @gl-light-font;
+                      color: @gl-text-base-color;
+                      line-height: 1;
+                      padding: 3px 5px;
+                      position: absolute;
+                      display: block;
+                      left: 0;
+                      cursor: pointer;
+                      white-space: nowrap;
+                      top: auto;
+                      bottom: -10px;
+                      background-color: #ffffff;
+                      .gl-drop-shadow(0 0 0 1px rgba(0,0,0,0.1););
+
+                      .gl-border-radius(3px);
+
+                      &:before{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border: 4px solid transparent;
+                        border-top: 0;
+                        border-bottom-color: rgba(0,0,0,0.1);
+                        position: absolute;
+                        top: -4px;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                           -moz-transform: translateX(-50%);
+                            -ms-transform: translateX(-50%);
+                             -o-transform: translateX(-50%);
+                                transform: translateX(-50%);
+                      }
+                    }
+                  }
+                }
+            }
+
+            a.gl-advanced-search-btn{
+              width: 37px;
+              height: 37px;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              background-color: @gl-bz-primary-color;
+              .gl-border-radius(50%);
+              position: absolute;
+              bottom: -18.5px;
+              left: 50%;
+              -webkit-transform: translateX(-50%);
+                 -moz-transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+                   -o-transform: translateX(-50%);
+                      transform: translateX(-50%);
+              i{
+                font-size: 18px;
+                color: #ffffff;
+                line-height: 37px;
+              }
+            }
+          }
+
+        &.expanded{
+            input{
+                border: 1px solid #eee;
+            }
+            .gl-category-dropdown{
+                .select2-container{
+                    border: 1px solid #eeeeee;
+                }
+            }
+            .gl-range-wrapper{
+                // border: 1px solid #eeeeee;
+            }
+        }
+    }
+}

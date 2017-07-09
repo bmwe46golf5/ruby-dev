@@ -1,0 +1,111 @@
+/*
+Search
+*/
+.up-redq-item-list{
+    background-color: #ffffff;
+    height: 100%;
+    border-right: 1px solid @rq-up-border-color;
+    position: relative;
+    overflow-y: scroll;
+
+    @media @smartphone_port{
+      height: auto !important;
+    }
+
+    .up-redq-single-form-item{
+        width: 100%;
+        // padding: 25px 20px;
+        display: block;
+        background-color: #fff;
+        border-bottom: 1px solid @rq-up-border-color;
+        position: relative;
+        .gl-transition;
+
+        &:before{
+            content: '';
+            width: 4px;
+            height: calc(~"100% + 1px");
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        a{
+            display: block;
+            padding: 25px 20px;
+
+            h3{
+                margin: 0 0 5px;
+                line-height: 1.5;
+                font-family: inherit;
+                font-size: @rq-up-fs-base;
+                font-weight: @rq-up-fw-bold;
+                color: @rq-up-fc-default;
+                display: inline-block;
+            }
+
+            p{
+                font-family: inherit;
+                font-size: @rq-up-fs-base - 2;
+                font-weight: @rq-up-fw-normal;
+                color: @rq-up-fc-alt;
+                margin: 0;
+            }
+
+            span.up-redq-post-status{
+                font-family: inherit;
+                font-size: @rq-up-fs-base - 2;
+                font-weight: @rq-up-fw-normal;
+                color: #fff;
+                background-color: @rq-up-primary-color;
+                width: 55px;
+                height: 20px;
+                position: absolute;
+                top: calc(~"(100% - 20px) / 2");
+                right: 25px;
+                line-height: 20px;
+                text-align: center;
+                .gl-border-radius(3px);
+            }
+        }
+
+        &.publish-post{
+            &:before{
+                background-color: @rq-up-primary-color;
+            }
+
+            span.up-redq-post-status{
+                background-color: @rq-up-primary-color;
+            }
+        }
+
+        &.draft-post{
+            &:before{
+                background-color: @rq-up-color-light-yellow;
+            }
+
+            span.up-redq-post-status{
+                background-color: @rq-up-color-light-yellow;
+            }
+        }
+
+        &.expired-post{
+            &:before{
+                background-color: @rq-up-color-light-red;
+            }
+
+            span.up-redq-post-status{
+                background-color: @rq-up-color-light-red;
+            }
+        }
+
+        &.active-post{
+            background-color: @rq-up-color-light-green;
+            z-index: 1;
+        }
+
+        &:hover{
+            background-color: @rq-up-color-light-green;
+        }
+    }
+}

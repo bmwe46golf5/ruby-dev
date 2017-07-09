@@ -1,0 +1,56 @@
+.gl-search-style-map-right{
+    .gl-search-result-wrapper{
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      padding: 0 20px;
+
+      @media @smartphone_port{
+          padding: 0 0 50px;
+      }
+
+      .gl-featured-items{
+        &:nth-child(n+3){
+          margin-top: 30px;
+          
+            @media @smartphone_land{
+                margin-top: 0
+            }
+        }
+        
+        @media @smartphone_port, @tablet_port{
+          width: 100%;
+          display: block;
+          float: none;
+        }
+
+        @media @smartphone_land{
+          width: 50%;
+          display: inline-block;
+          float: left;
+        }
+
+        @media @tablet_port{
+            margin-bottom: 40px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .gl-feat-items-img-wrapper{
+            height: auto;
+
+            img{
+                position: relative;
+            }
+        }
+
+        .gl-feat-item-details{
+            @media @tablet_land{
+                padding: 25px 20px;
+            }
+        }
+      }
+    }
+}

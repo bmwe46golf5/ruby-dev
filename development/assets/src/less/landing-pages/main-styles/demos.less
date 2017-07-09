@@ -1,0 +1,102 @@
+.gl-demos{
+    padding: 80px 0;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #f1f1f1;
+
+    &:last-child{
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .gl-demo-img-wrapper{
+        overflow: hidden;
+        position: relative;
+
+        @media @smartphone_port {
+            img{
+                max-width: 100%;
+            }
+        }
+        
+        .gl-color-overlay{
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .gl-demo-details{
+        div{
+            padding-left: 115px;
+
+            @media @smartphone_port {
+                padding-left: 15px
+            }
+
+            @media @tablet_port {
+                padding-left: 50px;
+            }
+
+            h3{
+                font-family: @gl-font-heading;
+                font-size: 28px;
+                font-weight: @gl-bold-font;
+                color: @gl-heading-base-color;
+                margin: 20px 0 30px;
+            }
+
+            p{
+                font-family: @gl-font-primary;
+                font-weight: @gl-normal-font;
+                font-size: @gl-font-size-base + 1;
+                color: @gl-text-base-color;
+                margin-bottom: 30px;
+            }
+
+            ul{
+                display: block;
+                margin-bottom: 30px;
+                
+                li{
+                    font-family: @gl-font-primary;
+                    font-weight: @gl-normal-font;
+                    font-size: @gl-font-size-base;
+                    color: @gl-text-base-color;
+                    padding-left: 30px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    
+                    &:before{
+                        content: '\f363';
+                        font-family: @ionicons-font-family;
+                        font-size: 20px;
+                        color: #d1d1d1;
+                        position: absolute;
+                        left: 0;
+                        line-height: 1;
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .gl-btn{
+                color: #ffffff;
+                background-color: @gl-bz-btn-color;
+                .gl-transition;
+
+                &:hover{
+                    background-color: darken(@gl-bz-btn-color, 10%);
+                }
+            }
+        }
+    }
+}

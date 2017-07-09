@@ -1,0 +1,132 @@
+.gl-overview-widget{
+    width: 100%;
+    border: 1px solid #ededed;
+
+    .gl-overview-wrapper{
+      padding: 55px 70px 30px;
+      display: block;
+      background-color: #ffffff;
+
+      @media @smartphone_port{
+        padding: 55px 30px 30px;
+      }
+
+      @media @tablet_port{
+          padding: 55px 25px 30px;
+      }
+
+      @media @tablet_land{
+          padding: 55px 45px 30px;
+      }
+
+      h3{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-h3;
+        font-weight: @gl-normal-font;
+        color: @gl-heading-base-color;
+        margin: 0 0 25px;
+        display: block;
+      }
+
+      ul{
+        display: block;
+        overflow: hidden;
+        margin-bottom: 0px;
+
+        li{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 3;
+          font-weight: @gl-light-font;
+          color: #bababa;
+          display: block;
+          padding: 15px 0;
+          border-top: 1px solid #f3f3f3;
+
+          span{
+            font-family: @gl-font-primary;
+            font-size: @gl-font-size-base - 3;
+            font-weight: @gl-light-font;
+            color: @gl-text-base-color;
+            float: right;
+          }
+        }
+      }
+    }
+
+    .gl-overview-btns-wrapper{
+      height: 60px;
+      border-top: 1px solid #ededed;
+
+      .gl-overview-price{
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        line-height: 60px;
+        padding-left: 70px;
+        padding-right: 15px;
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-h3;
+        font-weight: @gl-normal-font;
+        color: @gl-bz-primary-color;
+        width: calc(~"100% - 120px");
+        border-right: 1px solid #ededed;
+
+        @media @smartphone_port{
+            padding-left: 30px;
+        }
+        @media @tablet_port{
+            padding-left: 25px;
+        }
+        @media @tablet_land{
+            padding-left: 45px;
+        }
+      }
+
+      a.gl-overview-btns{
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        float: left;
+        text-align: center;
+        border-right: 1px solid #ededed;
+
+        i{
+          font-size: 21px;
+          color: @gl-text-base-color;
+        }
+
+        .gl-compare-btn{
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          margin-top: 15px;;
+
+          .icon-bar {
+            display: block;
+            width: 6px;
+            height: 2px;
+            border-radius: 0px;
+            background-color: #bababa;
+
+            &:nth-child(2){
+              width: 10px;
+              margin-top: 2px;
+            }
+
+            &:nth-child(3){
+              width: 8px;
+              margin-top: 2px;
+            }
+          }
+        }
+
+        &:last-child{
+          border-right: 0px solid;
+        }
+      }
+    }
+  }

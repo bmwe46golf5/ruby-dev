@@ -1,0 +1,136 @@
+// Tab style 1
+.gl-tab-style-1{
+    .gl-tab-nav-btns{
+        ul.nav-tabs{
+            border-bottom: 0;
+
+            li{
+                a{
+                    font-family: @gl-font-heading;
+                    font-size: @gl-font-size-base + 2;
+                    color: @gl-heading-base-color;
+                    font-weight: @gl-normal-font;
+                    padding: 0 50px;
+                    height: 55px;
+                    line-height: 55px;
+                    background-color: #ffffff;
+                    border: 1px solid #f2f2f2;
+                    border-left: 0;
+                    margin-right: 0;
+                    .gl-border-radius(0);
+                    position: relative;
+
+                    @media @smartphone_port{
+                        padding: 0 25px;
+                    }
+
+                    @media @tablet_port{
+                        padding: 0 35px;
+                    }
+                }
+
+                &:first-child{
+                    a{
+                        border-left: 1px solid #f2f2f2;
+                    }
+                }
+
+                &.active{
+                    a{
+
+                        &:after{
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            display: block;
+                            overflow: hidden;
+                            background-color: @gl-alt-color-5;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gl-tab-nav-contents{
+        padding: 35px 30px 50px;
+        border: 1px solid #ededed;
+
+        p{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base;
+            font-weight: @gl-light-font;
+            color: @gl-text-base-color;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.gl-tab-style-2{
+    .gl-tab-nav-btns{
+        ul.nav-tabs{
+            border-bottom: 0;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            background-color: #ffffff;
+            border: 1px solid #f2f2f2;
+            border-bottom: 0;
+            padding: 0 30px;
+
+            li{
+                padding: 0 15px;
+                position: relative;
+
+                a{
+                    font-family: @gl-font-heading;
+                    font-size: @gl-font-size-base + 2;
+                    color: @gl-heading-base-color;
+                    font-weight: @gl-normal-font;
+                    padding: 0;
+                    height: 55px;
+                    line-height: 55px;
+                    background-color: #ffffff;
+                    border: 0px solid #f2f2f2;
+                    border-left: 0;
+                    margin-right: 0;
+                    .gl-border-radius(0);
+                    position: relative;
+                }
+
+                &.active{
+                    &:after{
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        display: block;
+                        overflow: hidden;
+                        background-color: @gl-alt-color-5;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .gl-tab-nav-contents{
+        padding: 35px 30px 50px;
+        border: 1px solid #ededed;
+        background-color: #ffffff;
+
+        p{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base;
+            font-weight: @gl-light-font;
+            color: @gl-text-base-color;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+    }
+}

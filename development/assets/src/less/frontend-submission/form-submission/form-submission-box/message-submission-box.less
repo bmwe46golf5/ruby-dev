@@ -1,0 +1,49 @@
+/*
+MESSAGE & SUBMISSION FROM BOX
+*/
+.up-redq-chatbox-form-wrapper{
+    padding: 45px;
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+
+    @media @smartphone_port{
+      height: auto !important;
+      padding: 45px 15px;
+    }
+
+    @media @tablet_port{
+        padding: 45px 30px;
+    }
+
+    .up-redq-title-wrapper{
+        display: block;
+        overflow: hidden;
+        margin-bottom: 50px;
+        text-align: center;
+        
+        h3.up-redq-form-title{
+            font-family: inherit;
+            font-size: @rq-up-fs-base * 2 - 2;
+            font-weight: @rq-up-fw-bold;
+            color: @rq-up-color-gray;
+            margin: 0;
+            line-height: 1.5;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            padding-left: 65px;
+            
+            &:before{
+                content: '\e93a';
+                font-family: 'micons';
+                font-size: @rq-up-fs-base * 2 + 8;
+                color: @rq-up-color-gray;
+                line-height: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

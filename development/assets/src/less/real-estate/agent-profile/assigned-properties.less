@@ -1,0 +1,39 @@
+.gl-assigned-properties-wrapper{
+    .gl-featured-items{
+        padding: 0 10px;
+        @media @smartphone_port{
+            padding: 0;
+        }
+        @media @tablet_port{
+            &:nth-child(n+3){
+                margin-top: 50px;
+            }
+        }
+
+        .gl-feat-items-img-wrapper{
+            height: 180px;
+            @media @tablet_land{
+                height: 160px;
+            }
+        }
+
+        .gl-feat-item-details{
+            background-color: #ffffff;
+            @media @tablet_land{
+                padding: 25px 20px;
+            }
+
+            h3{
+                a{
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .gl-item-location{
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.gl-page-header-wrapper{
+  background: url("@{gl-img-root}page-header-bg.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+
+  a.gl-btn{
+    background-color: @gl-bz-primary-color;
+    color: @gl-heading-base-color;
+
+    &:hover{
+      background-color: darken(@gl-bz-primary-color, 5%);
+    }
+  }
+
+  a.gl-share-btn{
+    background-color: @gl-bz-alt-color-2;
+    color: #ffffff;
+
+    &:hover{
+      background-color: darken(@gl-bz-alt-color-2, 5%);
+    }
+  }
+}

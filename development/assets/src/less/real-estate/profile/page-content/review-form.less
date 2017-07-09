@@ -1,0 +1,144 @@
+.gl-review-submission{
+  display: block;
+  overflow: hidden;
+
+  form{
+    fieldset.gl-form-fields{
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      .gl-input-area{
+        width: calc(~"66.66666667% - 5px");
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+
+        input{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          line-height: 50px;
+          color: #bababa;
+          padding: 0 15px;
+          width: calc(~"100% / 2 - 5px");
+          height: 50px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          overflow: hidden;
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #eeeeee;
+          background-color: transparent;
+          outline: 0;
+          .gl-border-radius(3px);
+
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+
+        textarea{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: #bababa;
+          padding: 10px 15px;
+          width: 100%;
+          display: block;
+          overflow: hidden;
+          border: 1px solid #eeeeee;
+          background-color: transparent;
+          outline: 0;
+          .gl-border-radius(3px);
+        }
+      }
+
+      .gl-rating-wrapper{
+        width: calc(~"33.33333333% - 5px");
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        overflow: hidden;
+        float: left;
+        padding: 40px 30px 100px;
+        background-color: #ffffff;
+        border: 1px solid #eeeeee;
+        .gl-border-radius(3px);
+
+        h4{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base + 2;
+          font-weight: @gl-normal-font;
+          color: @gl-heading-base-color;
+          margin-top: 0;
+          margin-bottom: 30px;
+        }
+
+        .gl-rating-inputs{
+            display: block;
+            overflow: hidden;
+            margin-bottom: 15px;
+            
+            span.gl-rating-title{
+                font-family: @gl-font-primary;
+                font-size: @gl-font-size-base - 1;
+                font-weight: @gl-normal-font;
+                color: @gl-heading-base-color;
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .gl-rating-wrap{
+                display: inline-block;
+                float: right;
+                font-size: 0;
+                margin-top: 1px;
+
+                span{
+                    line-height: 1;
+                    i{
+                        font-size: 16px;
+                        color: @gl-bz-primary-color;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        span.gl-rating-number{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: @gl-text-base-color;
+        }
+      }
+    }
+
+    fieldset.gl-submit-wrapper{
+      width: 100%;
+      display: block;
+      overflow: hidden;
+
+      input.gl-btn{
+        background-color: @gl-bz-primary-color;
+        color: @gl-footer-top-bg;
+
+        &:hover{
+          background-color: darken(@gl-bz-primary-color, 5%);
+        }
+      }
+    }
+  }
+}

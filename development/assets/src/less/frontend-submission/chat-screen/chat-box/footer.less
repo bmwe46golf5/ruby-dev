@@ -1,0 +1,146 @@
+/*
+FOOTER
+*/
+.up-redq-floating-fixed-wrapper{
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    padding: 0 45px;
+    background-color: #ffffff;
+    border-top: 1px solid @rq-up-border-color;
+
+    @media @tablet_port{
+        padding: 0 15px;;
+    }
+
+    .up-redq-chatbox-form{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        -webkit-flex-direction: row; /* Safari */
+        flex-direction:         row;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -webkit-align-items: center; /* Safari */
+        align-items:         center;
+        flex-wrap: wrap;
+
+        .emojionearea,
+        .emojionearea.form-control{
+            display: inline-block;
+            position: relative !important;
+            width: calc(~"100% - 200px");
+            height: 100%;
+            padding: 0;
+            font-size: 14px;
+            border: 0;
+            background-color: #fff;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+
+            .emojionearea-editor {
+                position: absolute;
+                bottom: 20px;
+                display: block;
+                height: auto;
+                width: calc(~"100% - 40px");
+                min-height: 40px;
+                max-height: 59px;
+                overflow: auto;
+                padding: 6px 24px 6px 12px;
+                line-height: 1.42857143;
+                font-size: inherit;
+                color: @rq-up-color-gray;
+                background-color: #fff;
+                // border: 0;
+                cursor: text;
+                margin-right: 1px;
+                -moz-border-radius: 0;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+            .emojionearea-button{
+                right: 0;
+                top: 25px;
+                margin-right: 0 !important;
+            }
+        }
+
+        .up-redq-function-btns{
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            -webkit-flex-direction: row; /* Safari */
+            flex-direction:         row;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-align-items: center; /* Safari */
+            align-items:         center;
+            flex-wrap: wrap;
+
+            .up-redq-fileupload-btn{
+                position: relative;
+                display: inline-block;
+                margin: 0 15px;
+                overflow: hidden;
+                cursor: pointer;
+
+                i{
+                    font-size: @rq-up-fs-base + 4;
+                    color: @rq-up-color-gray;
+                }
+
+                input{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: inline-block;
+                    opacity: 0;
+                    border: 0;
+                    outline: 0;
+                    background-color: transparent;
+                }
+            }
+
+            .up-redq-impupload-btn{
+                cursor: pointer;
+                font-size: @rq-up-fs-base + 4;
+                color: @rq-up-color-gray;
+                margin-right: 25px;
+            }
+
+            .up-redq-msgsend-btn{
+                font-size: @rq-up-fs-base;
+                font-weight: @rq-up-fw-bold;
+                color: #fff;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 35px;
+                border: 0;
+                outline: 0;
+                background-color: @rq-up-primary-color;
+                .gl-transition;
+                .gl-border-radius(5px);
+
+                &:hover{
+                    background-color: darken(@rq-up-primary-color, 3%);
+                }
+            }
+        }
+    }
+}

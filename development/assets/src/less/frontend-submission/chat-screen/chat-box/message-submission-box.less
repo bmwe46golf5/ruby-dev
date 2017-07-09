@@ -1,0 +1,261 @@
+/*
+MESSAGE & SUBMISSION FROM BOX
+*/
+.up-redq-chatbox-wrapper{
+    padding: 45px;
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+
+    .up-redq-messaging-wrapper{
+        // Friends Message
+        .up-redq-friends-msgs{
+            width: 70%;
+            display: block;
+            overflow: hidden;
+            padding-left: 90px;
+            float: left;
+            position: relative;
+
+            @media @tablet_port{
+                width: 100%;
+            }
+
+            .up-redq-user-prof-pic{
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+
+                .up-redq-prof-pic{
+                    width: 70px;
+                    height: 70px;
+                    display: inline-block;
+                    overflow: hidden;
+                    .gl-border-radius(50%);
+                }
+
+                span.up-user-status{
+                    width: 14px;
+                    height: 14px;
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0px;
+                    border: 3px solid #fff;
+                    .gl-border-radius(50%);
+                    background-color: #e8e8e8;
+
+                    &.up-online{
+                        background-color: @rq-up-online;
+                    }
+
+                    &.up-away{
+                        background-color: @rq-up-away;
+                    }
+                }
+            }
+
+            .up-redq-msg-wrapper{
+                display: block;
+                overflow: hidden;
+                margin-bottom: 30px;
+                padding: 3px 3px 3px 15px;
+
+                .up-redq-msg{
+                    display: block;
+                    // overflow: hidden;
+                    position: relative;
+                    background-color: #ffffff;
+                    padding: 35px 40px;
+                    .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+                    .gl-border-radius(5px);
+
+                    button.up-redq-msg-del-btn{
+                        font-size: @rq-up-fs-base + 4;
+                        color: @rq-up-fc-alt;
+                        background-color: transparent;
+                        border: 0;
+                        outline: 0;
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                    }
+
+                    p{
+                        font-size: @rq-up-fs-base;
+                        font-weight: @rq-up-fw-normal;
+                        color: @rq-up-fc-default;
+                        margin: 0;
+                    }
+                }
+
+                &:nth-child(2){
+                    .up-redq-msg{
+                        &:before{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 10px 10px 0;
+                            border-color: transparent #ffffff transparent transparent;
+                            position: absolute;
+                            top: 25px;
+                            left: -10px;
+                            z-index: 1;
+                        }
+
+                        &:after{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 10px 10px 0;
+                            border-color: transparent fade(#7b7b7b, 25%) transparent transparent;
+                            position: absolute;
+                            top: 25px;
+                            left: -11px;
+                        }
+                    }
+                }
+
+                span.up-redq-post-time{
+                    font-size: @rq-up-fs-base - 2;
+                    color: @rq-up-fc-alt;
+                    display: block;
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        // User Message
+        .up-redq-user-msgs{
+            width: 70%;
+            display: block;
+            overflow: hidden;
+            padding-right: 90px;
+            position: relative;
+            float: right;
+
+            @media @tablet_port{
+                width: 100%;
+            }
+
+            .up-redq-user-prof-pic{
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                overflow: hidden;
+
+                .up-redq-prof-pic{
+                    width: 70px;
+                    height: 70px;
+                    display: inline-block;
+                    overflow: hidden;
+                    .gl-border-radius(50%);
+                }
+
+                span.up-user-status{
+                    width: 14px;
+                    height: 14px;
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 0px;
+                    border: 3px solid #fff;
+                    .gl-border-radius(50%);
+                    background-color: #e8e8e8;
+
+                    &.up-online{
+                        background-color: @rq-up-online;
+                    }
+
+                    &.up-away{
+                        background-color: @rq-up-away;
+                    }
+                }
+            }
+
+            .up-redq-msg-wrapper{
+                display: block;
+                overflow: hidden;
+                margin-bottom: 30px;
+                padding: 3px 15px 3px 3px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                .up-redq-msg{
+                    display: block;
+                    // overflow: hidden;
+                    position: relative;
+                    background-color: #ffffff;
+                    padding: 35px 40px;
+                    .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%););
+                    .gl-border-radius(5px);
+
+                    button.up-redq-msg-del-btn{
+                        font-size: @rq-up-fs-base + 4;
+                        color: @rq-up-fc-alt;
+                        background-color: transparent;
+                        border: 0;
+                        outline: 0;
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                    }
+
+                    p{
+                        font-size: @rq-up-fs-base;
+                        font-weight: @rq-up-fw-normal;
+                        color: @rq-up-fc-default;
+                        margin: 0;
+                    }
+                }
+
+                &:nth-child(2){
+                    .up-redq-msg{
+                        &:before{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 0 10px 10px;
+                            border-color: transparent transparent transparent #ffffff;
+                            position: absolute;
+                            top: 25px;
+                            right: -10px;
+                            z-index: 1;
+                        }
+
+                        &:after{
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 0 10px 10px;
+                            border-color: transparent transparent transparent fade(#7b7b7b, 25%);
+                            position: absolute;
+                            top: 25px;
+                            right: -11px;
+                        }
+                    }
+                }
+
+                span.up-redq-post-time{
+                    font-size: @rq-up-fs-base - 2;
+                    color: @rq-up-fc-alt;
+                    display: block;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

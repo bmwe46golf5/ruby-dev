@@ -1,0 +1,107 @@
+.gl-landing-page-template{
+    .gl-hero-img-wrapper{
+        background: url('@{gl-img-root}hero-bg.jpg') center center no-repeat;
+        background-size: cover;
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        resize: vertical;
+
+        @media @smartphone_port{
+            justify-content: flex-start;
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0,6,18,0.8);
+        }
+
+        .gl-hero-text-wrapper{
+            position: relative;
+            z-index: 1;
+            resize: vertical;
+
+            @media @smartphone_port{
+                padding: 100px 0;
+            }
+
+            h2{
+                font-family: @gl-font-heading;
+                font-size: 130px;
+                font-weight: @gl-bold-font;
+                color: #ffffff;
+                margin: 0 0 20px;
+                text-align: center;
+                padding-bottom: 50px;
+                position: relative;
+
+                @media @smartphone_port{
+                    font-size: 48px;
+                }
+                
+                &:after{
+                    content: '';
+                    width: 283px;
+                    height: 21px;
+                    display: inline-block;
+                    background: url("@{gl-img-root}splash.png") no-repeat center center;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                }
+            }
+
+            p{
+                font-family: @gl-font-heading;
+                font-size: 32px;
+                font-weight: @gl-light-font;
+                color: #ffffff;
+                text-align: center;
+                margin-bottom: 90px;
+
+                .gl-color-text{
+                  font-weight: @gl-bold-font;
+                }
+            }
+
+            .typed-cursor{
+                color: #ffffff;
+            }
+
+            .gl-scroll-down-wrapper{
+                text-align: center;
+                
+                a{
+                    width: 36px;
+                    height: 36px;
+                    display: inline-block;
+                    border: 3px solid #ffffff;
+                    color: #ffffff;
+                    font-size: 21px;
+                    text-align: center;
+                    .gl-border-radius(50%);
+
+                    i{
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

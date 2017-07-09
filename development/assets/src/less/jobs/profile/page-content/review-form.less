@@ -1,0 +1,30 @@
+.gl-review-submission{
+  form{
+    fieldset.gl-form-fields{
+      .gl-rating-wrapper{
+        background-color: @gl-review-wrapper-bg;
+
+        .gl-rating-inputs{
+                .gl-rating-wrap{
+                    span{
+                        i{
+                            color: @gl-bz-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+      }
+    }
+
+    fieldset.gl-submit-wrapper{
+      input.gl-btn{
+        background-color: @gl-bz-primary-color;
+        color: #ffffff;
+
+        &:hover{
+          background-color: darken(@gl-bz-primary-color, 5%);
+        }
+      }
+    }
+}

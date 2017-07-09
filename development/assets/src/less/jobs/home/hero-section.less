@@ -1,0 +1,63 @@
+.gl-hero-img-wrapper{
+  background: url('@{gl-img-root}hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+
+  &:after{
+    content: "";
+    .gl-transparent-overlay(20,75,143,0.8);
+  }
+
+  .container{
+    position: relative;
+    z-index: 10;
+
+    .gl-elements-content-wrapper{
+      h2.gl-hero-text-heading{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-h1 + 15;
+        font-weight: @gl-light-font;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 0 10px;
+
+        &:after{
+          color: #ffffff;
+        }
+
+        .gl-color-text{
+          font-weight: @gl-bold-font;
+          color: #ffffff;
+        }
+      }
+
+      p.gl-hero-text-paragraph{
+        font-weight: @gl-light-font;
+        color: #ffffff;
+
+        .gl-color-text{
+          font-weight: @gl-bold-font;
+          color: @gl-bz-primary-color;
+        }
+      }
+
+      .gl-directory-searchbar{
+        form{
+
+          button{
+            color: @gl-heading-base-color;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc4a52+0,fd5e65+100 */
+            background: #fc4a52; /* Old browsers */
+            background: -moz-linear-gradient(top,  #fff10e 0%, #fff65c 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #fff10e 0%,#fff65c 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #fff10e 0%,#fff65c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff10e', endColorstr='#fff65c',GradientType=0 ); /* IE6-9 */
+
+            i{
+              color: @gl-heading-base-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

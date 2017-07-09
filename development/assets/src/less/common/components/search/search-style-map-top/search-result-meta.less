@@ -1,0 +1,156 @@
+.gl-search-style-map-top{
+    .gl-search-meta-wrapper{
+      display: table;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 50px;
+
+    @media @smartphone_port, @tablet_port{
+        display: block;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+      p{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        margin: 0;
+        padding-right: 50px;
+        display: table-cell;
+        vertical-align: middle;
+
+        @media @smartphone_port, @tablet_port{
+              display: block;
+              margin-bottom: 15px;
+              padding: 0;
+              text-align: center;
+        }
+
+        @media @tablet_land{
+            width: 20%;
+            padding-right: 30px;
+        }
+      }
+
+      .gl-search-tags{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        @media @smartphone_port, @tablet_port{
+              display: block;
+              margin-bottom: 15px;
+              overflow: hidden;
+        }
+
+        @media @tablet_land{
+            width: 50%;
+        }
+
+        a.gl-tag-btn{
+            @media @smartphone_port{
+                 float: none;
+            }
+
+            @media @tablet_port{
+                 float: none;
+            }
+
+          &:nth-child(1){
+            background-color: rgba(34,168,244,0.10);
+            color: #22a8f4
+          }
+
+          &:nth-child(2){
+            background-color: rgba(255,141,69,0.10);
+            color: #ff8d3b
+          }
+
+          &:nth-child(3){
+            background-color: rgba(157,49,197,0.10);
+            color: #9d31c5
+          }
+
+          &:nth-child(4){
+            background-color: rgba(74,197,182,0.10);
+            color: #4ac5b6
+          }
+
+          &:nth-child(5){
+            background-color: rgba(237,52,174,0.10);
+            color: #ed34ae
+          }
+
+          &:nth-child(6){
+            background-color: rgba(52,104,137,0.10);
+            color: #3468ed
+          }
+        }
+      }
+
+      .gl-search-sorting{
+        display: table-cell;
+        vertical-align: middle;
+        float: right;
+        text-align: center;
+
+        @media @smartphone_port, @tablet_port, @tablet_land{
+          display: inline-block;
+          float: none;
+        }
+
+        @media @tablet_land{
+          width: auto;
+          float: none;
+        }
+
+        > span{
+          display: table-cell;
+          padding-right: 20px;
+          vertical-align: middle;
+
+          @media @smartphone_port{
+              padding-right: 10px;
+          }
+        }
+
+        .gl-sorting-dropdown{
+          display: table-cell;
+
+          .gl-salary-sort,
+          .gl-date-sort{
+            display: inline-block;
+            float: left;
+            margin-right: 5px;
+
+            .select2-container{
+              padding: 0 15px;
+              height: 100%;
+              margin-top: 0;
+              background-color: #fff;
+              border: 1px solid #eaeaea;
+
+              .select2-selection--single{
+                height: 100%;
+
+                .select2-selection__rendered{
+                  line-height: 30px;
+                }
+
+                .select2-selection__arrow{
+                  height: 30px;
+                  top: 0;
+
+                  b{
+                    line-height: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}

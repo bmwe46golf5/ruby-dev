@@ -1,0 +1,116 @@
+.gl-map-marker-wrapper{
+  &.gl-job-listing-map{
+    padding: 20px 65px 20px 30px;
+    display: table;
+    width: 100%;
+
+    .gl-map-marker-comp-img{
+      width: auto;
+      height: auto;
+      text-align: center;
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+
+      img{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    .gl-map-marker-info-details{
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 25px;
+
+      h3.gl-job-heading{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base + 2;
+        font-weight: @gl-normal-font;
+        color: @gl-heading-base-color;
+        margin: 0 0 5px;
+      }
+
+      p.gl-job-location{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        margin-bottom: 5px;
+        padding-left: 20px;;
+        position: relative;
+
+        &:before{
+          content: '\f455';
+          font-family: @ionicons-font-family;
+          font-size: 19px;
+          position: absolute;
+          left: 0;
+          top: -4px;
+        }
+      }
+
+      span.gl-item-status-label{
+        display: block;
+      }
+    }
+  }
+}
+
+// MARKER ICON
+.gl-marker-icon{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: #ffffff;
+  .gl-border-radius;
+  text-align: center;
+  position: relative;
+  .gl-drop-shadow (0 5px 5px rgba(0,0,0,0.15));
+
+  &:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 0;
+    border-top-color: #ffffff;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  .gl-map-marker-img{
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    .gl-border-radius(50%);
+
+    img{
+      width: 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &.gl-job-icon{
+    .gl-map-marker-img{
+      background-color: #4ac5b6
+    }
+  }
+}

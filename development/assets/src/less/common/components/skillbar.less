@@ -1,0 +1,57 @@
+.gl-skillbar{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    p,
+    span{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        margin: 0;
+        display: inline-block;
+        float: left;
+    }
+
+    p{
+        width: 120px;
+        padding-right: 20px;
+        @media @smartphone_port{
+            width: 100%;
+            display: block;
+        }
+    }
+
+    span{
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+
+    .gl-skillbar-bar-wrapper{
+        position:relative;
+        display: inline-block;
+        float: left;
+        width: calc(~"100% - 180px");
+        background:#f3f3f3;
+        height:4px;
+        top: 10px;
+        .gl-transition(.25s);
+
+        @media @smartphone_port{
+            width: calc(~"100% - 60px");
+        }
+
+        .gl-skillbar-bar{
+            height:4px;
+            width:0px;
+            background-color: @gl-bz-primary-color;
+        }
+    }
+
+}

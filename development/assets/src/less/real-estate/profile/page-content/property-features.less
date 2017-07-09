@@ -1,0 +1,65 @@
+.gl-property-features{
+  ul{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border: 1px solid #ededed;
+    border-right: 0px solid;
+    border-bottom: 0px solid;
+
+    li{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: @gl-text-base-color;
+      width: 33.33336%;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      padding: 15px 20px;
+      margin-bottom: 0;
+
+      border-right: 1px solid #ededed;
+      border-bottom: 1px solid #ededed;
+
+      i{
+        margin-right: 15px;
+        color: #50c54a;
+      }
+
+      &:before{
+        content: '';
+        width: 0;
+        height: 0;
+        display: none;
+      }
+
+      @media @smartphone_port{
+          width: 100%;
+          display: block;
+      }
+      @media @smartphone_land{
+          width: 50%;
+          float: left;
+          display: inline-block;
+      }
+    }
+  }
+}
+.gl-page-content-section {
+  .gl-page-contents-wrapper{
+    .gl-property-features{
+      ul{
+        li{
+          &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

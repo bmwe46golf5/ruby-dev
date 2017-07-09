@@ -1,0 +1,352 @@
+// JOB ACCORDION
+.panel-default,
+.panel {
+  border: 0px solid;
+  background-color: transparent;
+  .gl-drop-shadow(0px 0px 0px rgba(0,0,0,0));
+  margin-bottom: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+.panel-group .panel + .panel{
+  margin: 0;
+}
+
+.gl-job-list-item{
+
+  &:nth-child(odd){
+    background-color: #f5fdfc;
+  }
+
+  &:nth-child(even){
+    background-color: #ecfcfa;
+  }
+
+  .gl-job-list-item-wrapper{
+    border: 0px solid;
+    background-color: transparent;
+    display: table;
+    width: 100%;
+    overflow: hidden;
+
+    .gl-border-radius(0px);
+
+    @media @smartphone_port{
+        display: block;
+    }
+
+    a{
+      .gl-job-item-part{
+        display: table-cell;
+        overflow: hidden;
+        padding: 0 15px;
+        vertical-align: middle;
+
+        @media @smartphone_port{
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+      }
+
+      .gl-job-company-logo{
+        width: 140px;
+        text-align: center;
+
+        @media @smartphone_port{
+            width: 100%;
+        }
+
+        img{
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          max-width: 80px;
+        }
+      }
+
+      .gl-job-position-company{
+        width: 440px;
+
+        @media @smartphone_port{
+            width: 100%;
+        }
+
+        h3{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base + 2;
+          font-weight: @gl-normal-font;
+          color: @gl-heading-base-color;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          float: left;
+          padding-right: 25px;
+          line-height: 1.25;
+          margin: 0;
+          margin-right: 25px;
+          border-right: 1px solid #dedede;
+
+            @media @smartphone_port{
+                display: block;
+                float: none;
+                padding-right: 0;
+                margin-right: 0;
+                border-right: 0px solid;
+            }
+        }
+
+        p{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: @gl-text-base-color;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          float: left;
+          margin: 0;
+
+          @media @smartphone_port{
+                display: block;
+                float: none;
+            }
+        }
+      }
+
+      .gl-job-availability{
+        width: 140px;
+        text-align: center;
+        line-height: 1;
+
+        @media @smartphone_port{
+            width: 100%;
+        }
+
+        .gl-item-status-label{
+          -webkit-transform: translateY(0);
+           -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+             -o-transform: translateY(0);
+                transform: translateY(0);
+        }
+      }
+
+      .gl-job-sallery{
+        width: 250px;
+        text-align: center;
+
+        @media @smartphone_port{
+            width: 100%;
+        }
+
+        i{
+          font-size: @gl-font-size-base + 3;
+          color: #41b9aa;
+          line-height: 22px;
+          padding-right: 20px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+        }
+
+        h3{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base + 2;
+          font-weight: @gl-normal-font;
+          color: @gl-heading-base-color;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+          padding-right: 20px;
+          line-height: 21px;
+          margin: 0;
+        }
+
+        span{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: @gl-text-base-color;
+          line-height: 21px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+        }
+      }
+
+      .gl-job-location{
+        width: 220px;
+        text-align: center;
+
+        @media @smartphone_port{
+            width: 100%;
+        }
+
+        i{
+          font-size: @gl-font-size-base + 3;
+          color: #41b9aa;
+          padding-right: 10px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+        }
+
+        span{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: @gl-text-base-color;
+          line-height: 24px;
+          display: inline-block;
+          *display: inline;
+          *zoom: 1;
+        }
+      }
+    }
+  }
+
+  .gl-job-list-details{
+    background-color: #fdfdfd;
+
+
+    > .panel-body,
+    > .list-group{
+      border: 0px solid;
+      border-top: 0px solid !important;
+      padding: 60px 120px;
+
+        @media @smartphone_port{
+            padding: 60px 20px;
+        }
+
+        @media @tablet_port, @tablet_land{
+            padding: 60px 80px;
+        }
+
+      .gl-jobdetails-sec{
+        display: block;
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        &:last-child{
+          margin-bottom: 0px;
+        }
+
+        h3{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base + 6;
+          font-weight: @gl-normal-font;
+          color: @gl-heading-base-color;
+          margin: 0 0 40px;
+          display: block;
+          overflow: hidden;
+        }
+
+        p{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: @gl-text-base-color;
+          display: block;
+          overflow: hidden;
+          margin: 0;
+        }
+
+        ul{
+          display: block;
+          overflow: hidden;
+
+          li{
+            font-family: @gl-font-primary;
+            font-size: @gl-font-size-base - 1;
+            font-weight: @gl-light-font;
+            color: @gl-text-base-color;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 12px;
+
+            &:before{
+              content: '';
+              width: 4px;
+              height: 1px;
+              display: inline-block;
+              *display: inline;
+              *zoom: 1;
+              background-color: @gl-text-base-color;
+              overflow: hidden;
+              position: absolute;
+              top: 11px;
+              left: 0;
+            }
+          }
+        }
+
+        a.gl-btn{
+          float: left;
+          margin-right: 10px;
+
+          &:hover{
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.gl-job-list-item-wrapper{
+  border: 0px solid;
+  background-color: transparent;
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  .gl-border-radius(0px);
+
+  a{
+    padding: 35px 0;
+    display: table;
+
+    @media @smartphone_port{
+        display: block;
+    }
+
+    .gl-job-item-part{
+      display: table-cell;
+      overflow: hidden;
+      padding: 0 15px;
+      vertical-align: middle;
+    }
+
+    .gl-job-company-logo{
+      width: 140px;
+      text-align: center;
+
+      img{
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        max-width: 80px;
+      }
+    }
+
+    .gl-job-position-company{
+      h3{
+        padding-right: 0px;
+        border-right: 0px solid #dedede;
+      }
+
+      p{
+        padding-left: 0px;
+      }
+    }
+  }
+}

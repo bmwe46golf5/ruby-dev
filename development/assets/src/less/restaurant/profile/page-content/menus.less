@@ -1,0 +1,140 @@
+.gl-menus-wrapper{
+  display: block;
+  overflow: hidden;
+  margin-bottom: 70px;
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
+
+  .gl-menu-item{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: -1px;
+    border: 1px solid #f2f2f2;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+
+    @media @smartphone_port{
+      padding-bottom: 50px
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    .gl-menu-item-img-wrapper{
+      width: 120px;
+      height: 90px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      float: left;
+      margin-right: 40px;
+      position: relative;
+
+      @media @smartphone_port{
+        width: 90px;
+        height: 70px;
+        display: inline-block;
+        float: left;
+        margin-right: 20px;
+        position: relative;
+      }
+
+      @media @tablet_port{
+        margin-right: 30px
+      }
+
+
+      img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    .gl-menu-item-details{
+      width: calc(~"100% - 160px");
+      padding-right: 140px;
+      float: left;
+
+      @media @smartphone_port{
+        width: calc(~"100% - 110px");
+        padding: 0;
+        float: left;
+      }
+
+      @media @tablet_port{
+        padding-right: 100px;
+      }
+
+
+      h4{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base + 2;
+        font-weight: @gl-normal-font;
+        color: @gl-heading-base-color;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        display: block;
+        overflow: hidden;
+
+        @media @smartphone_port, @tablet_port{
+          margin-top: 7px;
+        }
+      }
+
+      p,
+      span{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        color: @gl-text-base-color;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 0;;
+      }
+
+      span{
+        color: @gl-bz-primary-color;
+      }
+    }
+
+    .gl-item-status-label{
+      background-color: @gl-bz-alt-color-1;
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      -webkit-transform: translateY(-50%);
+         -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+           -o-transform: translateY(-50%);
+              transform: translateY(-50%);
+
+      @media @smartphone_port{
+        top: auto;
+        right: auto;
+        left: 15px;
+        bottom: 15px;
+        -webkit-transform: translateY(0);
+           -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+             -o-transform: translateY(0);
+                transform: translateY(0);
+      }
+
+      @media @tablet_port{
+        right: 25px;
+      }
+    }
+  }
+
+
+}

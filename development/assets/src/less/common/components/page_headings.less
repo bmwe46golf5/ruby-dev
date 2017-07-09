@@ -1,0 +1,178 @@
+// PAGE HEADER
+.gl-page-header-wrapper{
+  padding: 340px 0 100px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:after{
+    content: '';
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.6+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  @media @smartphone_port{
+      padding: 240px 15px 100px;
+  }
+
+  &.gl-small-page-header{
+    padding: 250px 0 150px;
+    background-image: url("@{gl-img-root}page-header-bg.jpg");
+    text-align: center;
+  }
+
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .gl-transparent-overlay;
+  }
+
+  .container{
+    position: relative;
+    z-index: 10;
+
+    h1{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-h1 + 10;
+      font-weight: @gl-bold-font;
+      color: #ffffff;
+      margin: 0 0 5px;
+      position: relative;
+
+      @media @smartphone_port{
+            display: block;
+            overflow: hidden;
+        }
+
+      .gl-item-status-label{
+        position: absolute;
+        top: 25px;
+        margin-left: 15px;
+
+        @media @smartphone_port{
+            position: relative;
+            top: auto;
+            margin-left: 0;
+            margin-top: 15px;
+            display: block;
+        }
+      }
+    }
+
+    p{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: #ffffff;
+      margin: 0 0 5px;
+      padding-left: 3px;
+
+      i{
+        font-size: @gl-font-size-base + 1;
+        color: #ffffff;
+        margin-right: 10px;
+      }
+    }
+
+    span.gl-item-rating{
+      color: #ffffff;
+    }
+
+    .gl-breadcumb{
+      display: block;
+      overflow: hidden;
+      text-align: center;
+
+      a{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        color: #ffffff;
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        .gl-transition;
+
+        &:after{
+          content: '>';
+          margin-left: 3px;
+          margin-right: 3px;
+        }
+      }
+
+      span{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        color: #ffffff;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+      }
+    }
+
+    .gl-page-head-btn-wrapper{
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @media @smartphone_port{
+            position: relative;
+            bottom: auto;
+            right: auto;
+            margin-top: 20px;
+            display: block;
+        }
+
+      a.gl-btn{
+        margin-right: 10px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  a.gl-info-btn{
+    font-family: @gl-font-primary;
+    font-size: @gl-font-size-base + 2;
+    font-weight: @gl-bold-font;
+    color: #ffffff;
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    position: absolute;
+    top: 60px;
+    right: 160px;
+    z-index: 10;
+    .gl-border-radius(50%);
+  }
+}

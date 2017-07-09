@@ -1,0 +1,15 @@
+.gl-review-details{
+  .gl-reviews{
+    .gl-review-text{
+      background-color: @gl-review-wrapper-bg;
+
+      &:before{
+        border-color: transparent @gl-review-wrapper-bg transparent transparent;
+
+        @media @smartphone_port{
+            border-color: transparent transparent @gl-review-wrapper-bg transparent;
+        }
+      }
+    }
+  }
+}

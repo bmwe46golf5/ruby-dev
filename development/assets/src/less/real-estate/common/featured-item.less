@@ -1,0 +1,118 @@
+.gl-featured-items{
+      .gl-feat-item-details{
+         background-color: #ffffff;
+        .gl-sold-label{
+          background-color: @gl-bz-primary-color;
+        }
+
+        .gl-sale-label{
+          background-color: @gl-bz-alt-color-2;
+        }
+
+        .gl-rent-label{
+          background-color: @gl-bz-alt-color-1;
+        }
+
+        h3{
+          a{
+            &:hover{
+              color: @gl-bz-primary-color;
+            }
+          }
+        }
+      }
+
+      .gl-feat-item-metas{
+        background-color: #ffffff;
+        padding: 0;
+        display: table;
+        width: 100%;
+        .gl-transition;
+
+        ul{
+            li{
+                margin-right: 15px;
+                
+                @media @smartphone_port, @tablet_port{
+                    margin-right: 9px;
+                }
+            }
+        }
+
+        ul.gl-feature-info{
+            width: calc(~"100% - 100px");
+            display: table-cell;
+            padding: 15px 10px 15px 30px;
+            vertical-align: middle;
+
+            @media @smartphone_port, @tablet_port{
+                width: calc(~"100% - 80px");
+                padding: 15px 10px 15px 15px;
+            }
+        }
+
+        ul.gl-wishlist-compare-wrapper{
+            width: 100px;
+            display: table-cell;
+            vertical-align: middle;
+            opacity: 1;
+            .gl-transition;
+
+            @media @smartphone_port, @tablet_port{
+                width: 75px;
+            }
+
+            li{
+                width: 50%;
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                margin-right: 0;
+
+                a{
+                    font-size: 18px;
+                    color: #bababa;
+                    line-height: 1;
+                    width: 100%;
+                    padding: 15px 0;
+                    vertical-align: middle;
+                    text-align: center;
+
+                    .gl-transition;
+
+                    .gl-compare-btn{
+                        display: inline-block;
+
+                        span{
+                            .gl-transition;
+                        }
+                    }
+
+                    &:hover{
+                        color: @gl-bz-primary-color;
+
+                        span{
+                            background-color: @gl-bz-primary-color;
+                        }
+                    }
+                }
+
+                &:first-child{
+                    border-left: 1px solid #eeeeee;
+                    border-right: 1px solid #eeeeee;
+                }
+            }
+        }
+      }
+
+      &:hover{
+        .gl-feat-item-metas{
+            // background-color: transparent;
+
+            ul.gl-wishlist-compare-wrapper{
+                opacity: 1
+            }
+        }
+      }
+}

@@ -1,0 +1,74 @@
+.gl-comments-form-wrapper{
+  display: block;
+  overflow: hidden;
+
+  form{
+    fieldset{
+      display: block;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      input{
+        font-family: @gl-font-primary;
+        font-size: @gl-font-size-base - 1;
+        font-weight: @gl-light-font;
+        line-height: 50px;
+        color: #bababa;
+        padding: 0 15px;
+        width: calc(~"100% / 3 - 6.8px");
+        height: 50px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+        border: 1px solid #eeeeee;
+        background-color: #ffffff;
+        outline: 0;
+        .gl-border-radius(3px);
+
+        @media @smartphone_port{
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+
+    textarea{
+      font-family: @gl-font-primary;
+      font-size: @gl-font-size-base - 1;
+      font-weight: @gl-light-font;
+      color: #bababa;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      border: 1px solid #eeeeee;
+      background-color: #ffffff;
+      outline: 0;
+      .gl-border-radius(3px);
+    }
+
+    input.gl-btn{
+      font-weight: @gl-bold-font;
+      width: auto;
+      height: auto;
+      padding: 15px 30px;
+      line-height: 1;
+      background-color: @gl-bz-alt-color-1;
+      color: #ffffff;
+
+      &:hover{
+        background-color: darken(@gl-bz-alt-color-1, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.gl-search-style-map-top{
+    .gl-search-result-wrapper{
+      display: block;
+      width: 100%;
+      overflow: hidden;
+
+      @media @smartphone_port, @smartphone_land, @tablet_port,{
+        padding: 0;
+      }
+
+      .gl-featured-items{
+        &:nth-child(n+4){
+          margin-top: 20px;
+        }
+
+        @media @smartphone_port{
+          width: 100%;
+          display: block;
+          float: none;
+        }
+
+        @media @tablet_port{
+            margin-bottom: 40px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            &:nth-child(n+4){
+              margin-top: 0px;
+            }
+        }
+
+        .gl-feat-items-img-wrapper{
+            height: auto;
+
+            img{
+                position: relative;
+            }
+        }
+
+        .gl-feat-item-details{
+            @media @tablet_land{
+                padding: 25px 20px;
+            }
+        }
+      }
+    }
+}

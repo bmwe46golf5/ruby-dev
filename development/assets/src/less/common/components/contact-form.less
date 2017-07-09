@@ -1,0 +1,45 @@
+form{
+    &.gl-contact-form{
+        input,
+        textarea{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-light-font;
+          color: #bababa;
+          display: block;
+          overflow: hidden;
+          padding: 0 15px;
+          margin-bottom: 15px;
+          width: 100%;
+          border: 1px solid #eeeeee;
+          outline: 0;
+          .gl-border-radius(3px);
+        }
+
+        input{
+          line-height: 48px;
+          height: 48px;
+        }
+
+        textarea{
+          padding: 15px;
+        }
+
+        input[type='submit']{
+          font-family: @gl-font-primary;
+          font-size: @gl-font-size-base - 1;
+          font-weight: @gl-bold-font;
+          color: #ffffff;
+          width: auto;
+          line-height: 1;
+          padding: 15px 30px;
+          margin-bottom: 0;
+          background-color: @gl-bz-primary-color;
+          .gl-border-radius;
+
+          &:hover{
+            background-color: darken(@gl-bz-primary-color, 10%);
+          }
+        }
+    }
+}

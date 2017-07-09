@@ -1,0 +1,175 @@
+.gl-what-you-need-section{
+  background-color: #f9f9f9;
+
+  .gl-listing-categories-wrapper{
+    display: block;
+    overflow: hidden;
+
+    .gl-listing-cat-item{
+      width: calc(~"100% / 4 - 10px");
+      height: 275px;
+      float: left;
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+
+      @media @smartphone_port{
+          width: calc(~"100% - 15px");
+          height: auto;
+      }
+
+        @media @smartphone_land{
+            width: calc(~"100% / 2 - 12px");
+            height: 250px;
+        }
+
+        @media @tablet_port{
+            width: calc(~"100% / 4 - 10px");
+            height: 170px;
+        }
+
+        @media @tablet_land{
+            height: 230px;
+        }
+
+      img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        -webkit-transition: all .8s cubic-bezier(.28,.75,.25,1);
+           -moz-transition: all .8s cubic-bezier(.28,.75,.25,1);
+             -ms-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                -o-transition: all .8s cubic-bezier(.28,.75,.25,1);
+                    transition: all .8s cubic-bezier(.28,.75,.25,1);
+
+        @media @smartphone_port{
+          position: relative;
+          top: auto;
+          left: auto;
+          right: auto;
+          bottom: auto;
+        }
+
+      }
+
+      &:hover img{
+        -webkit-transform: scale(1.04) translate3d(0,0,0);
+           -moz-transform: scale(1.04) translate3d(0,0,0);
+             -ms-transform: scale(1.04) translate3d(0,0,0);
+                -o-transform: scale(1.04) translate3d(0,0,0);
+                     transform: scale(1.04) translate3d(0,0,0);
+      }
+
+      a.gl-img-overlay-effect{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        span.gl-cat-title{
+            font-family: @gl-font-primary;
+            font-size: @gl-font-size-h3;
+            font-weight: @gl-normal-font;
+            color: #ffffff;
+            position: absolute;
+            bottom: 35px;
+            left: 45px;
+        }
+      }
+
+       &:nth-child(1){
+            .gl-img-overlay-effect{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(250,177,177,0) 32%, rgba(240,11,11,.41) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(250,177,177,0) 32%,rgba(240,11,11,.41) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(250,177,177,0) 32%,rgba(240,11,11,.41) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f00b0b',GradientType=0 ); /* IE6-9 */
+            }
+        }
+
+        &:nth-child(2){
+            .gl-img-overlay-effect{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(192,229,226,0) 32%, rgba(59,175,165,.41) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(192,229,226,0) 32%,rgba(59,175,165,.41) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(192,229,226,0) 32%,rgba(59,175,165,.41) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#3bafa5',GradientType=0 ); /* IE6-9 */
+            }
+        }
+
+        &:nth-child(3){
+            .gl-img-overlay-effect{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(235,179,235,0) 32%, rgba(194,19,192,0.41) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(235,179,235,0) 32%,rgba(194,19,192,0.41) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(235,179,235,0) 32%,rgba(194,19,192,0.41) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#9cc213c0',GradientType=0 ); /* IE6-9 */
+            }
+        }
+
+        &:nth-child(4){
+            .gl-img-overlay-effect{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(252,187,217,0) 32%, rgba(247,41,137,0.41) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(252,187,217,0) 32%,rgba(247,41,137,0.41) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(252,187,217,0) 32%,rgba(247,41,137,0.41) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#69f72989',GradientType=0 ); /* IE6-9 */
+            }
+        }
+
+        &:nth-child(5){
+            .gl-img-overlay-effect{
+                background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(192,212,236,0) 32%, rgba(58,120,195,0.41) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(192,212,236,0) 32%,rgba(58,120,195,0.41) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(192,212,236,0) 32%,rgba(58,120,195,0.41) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#693a78c3',GradientType=0 ); /* IE6-9 */
+            }
+        }
+    }
+
+    .gl-dbl-width{
+      width: calc(~"50% - 15px");
+      
+      @media @smartphone_port{
+            width: calc(~"100% - 15px");
+            height: auto;
+
+            img{
+              position: relative;
+              top: auto;
+              left: auto;
+              right: auto;
+              bottom: auto;
+            }
+        }
+
+        @media @tablet_port{
+            width: calc(~"50% - 15px");
+            height: 170px;
+        }
+        @media @tablet_land{
+            height: 230px;
+        }
+    }
+
+    .gl-dbl-height{
+      height: 275px * 2 + 10 ;
+
+      @media @smartphone_port{
+            height: 250px * 2 + 10;
+        }
+
+      @media @tablet_port{
+            height: 170px * 2 + 10;
+        }
+
+        @media @tablet_land{
+            height: 230px * 2 + 10;
+        }
+    }
+  }
+}

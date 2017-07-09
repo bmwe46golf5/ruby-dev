@@ -1,0 +1,43 @@
+.gl-featured-listing-wrapper{
+  display: block;
+  overflow: hidden;
+
+  .gl-featured-items{
+    .gl-feat-item-details{
+      span.gl-item-rating{
+        position: absolute;
+        right: 35px;
+        top: 30px;
+
+        i{
+            color: @gl-bz-primary-color;
+        }
+      }
+
+      h3{
+        padding-right: 50px;
+        a{
+          &:hover{
+            color: @gl-bz-primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gl-more-btn-wrapper{
+  display: block;
+  overflow: hidden;
+  margin-top: 60px;
+  text-align: center;
+
+  a{
+    background-color: @gl-bz-alt-color-2;
+    color: #ffffff;
+
+    &:hover{
+      background-color: darken(@gl-bz-alt-color-2, 5%)
+    }
+  }
+}

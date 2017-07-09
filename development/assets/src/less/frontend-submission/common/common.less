@@ -1,0 +1,263 @@
+// @import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
+// @rq-up-fn: 'PT Sans', sans-serif;
+
+// body{
+//   font-family: @rq-up-fn;
+// }
+
+// .up-redq-frontend-section{
+//   display: block;
+//   overflow-y: hidden;
+//   position: relative;
+
+//   .up-redq-leftside-nav{
+//     width: 310px;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//   }
+
+//   .up-redq-contents-wrapper{
+//     width: calc(~"100% - 310px");
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     background-color: @rq-up-color-light-green;
+
+//     .up-redq-main-content{
+//       margin-top: 55px;
+      
+//       .up-redq-form-list-wrapper{
+//         width: 25%;
+//         float: left;
+//         height: 100%;
+//       }
+
+//       .up-redq-post-subbmission-wrapper{
+//         width: calc(~"100% - 25%");
+//         float: left;
+//         height: 100%;
+//         position: relative;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700';
+@rq-up-fn: 'PT Sans', sans-serif;
+
+body{
+  font-family: @rq-up-fn;
+}
+
+
+.up-redq-frontend--section{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f5f1;
+
+  &.show-nav {
+    .up-redq-inner-wrapper {
+      -webkit-transform: translateX(310px);
+      transform: translateX(310px);
+    }
+  }
+
+  .up-redq-inner-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+  }
+
+  .up-redq-leftside-nav{
+    width: 310px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: -310px;
+    background-color: @rq-up-color-dark;
+  }
+
+  .up-redq-contents-wrapper{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: @rq-up-color-light-green;
+
+    @media @smartphone_port{
+      position: relative;
+    }
+
+    .up-redq-main-content{
+      margin-top: 55px;
+
+      @media @smartphone_port{
+        margin-top: 0;
+        // padding-top: 55px;
+        height: auto !important;
+      }
+      
+      .up-redq-item-list-wrapper{
+        width: 420px;
+        float: left;
+        height: 100%;
+
+        @media @smartphone_port{
+            width: 100%;
+            float: none;
+        }
+
+        @media @tablet_port{
+            width: 300px;
+        }
+
+        @media @tablet_land{
+            width: 380px;
+        }
+      }
+
+      .up-redq-post-subbmission-wrapper{
+        width: calc(~"100% - 420px");
+        float: left;
+        height: 100%;
+        position: relative;
+
+        @media @smartphone_port{
+            width: 100%;
+            float: none;
+        }
+
+        @media @tablet_port{
+            width: calc(~"100% - 300px");
+        }
+
+        @media @tablet_land{
+            width: calc(~"100% - 380px");
+        }
+      }
+    }
+  }
+
+  &.up-redq-messaging-page{
+    .up-redq-contents-wrapper{
+      .up-redq-main-content{
+        .up-redq-post-subbmission-wrapper{
+          width: calc(~"100% - (420px + 310px)");
+          float: left;
+          height: 100%;
+          position: relative;
+
+          @media @smartphone_port{
+              width: 100%;
+              float: none;
+          }
+
+          @media @tablet_port{
+            width: calc(~"100% - 300px");
+          }
+
+          @media @tablet_land{
+              width: calc(~"100% - 380px");
+          }
+        }
+
+        .up-redq-friends-profile-wrapper{
+          width: 310px;
+          float: left;
+          height: 100%;
+          overflow-y: scroll;
+          position: relative;
+          background-color: #fff;
+
+          @media @smartphone_port{
+              width: 100%;
+              float: none;
+          }
+
+          @media @tablet_port, @tablet_land{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.up-console-page{
+    .up-redq-contents-wrapper{
+      .up-redq-main-content{
+        padding: 50px 25px;
+        overflow-y: scroll;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media @smartphone_port{
+          padding: 50px 0;
+        }
+
+        .up-redq-widgets{
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  &.up-redq-settings-page{
+    .up-redq-contents-wrapper{
+      .up-redq-main-content{
+        .up-redq-post-subbmission-wrapper{
+          width: 100%;
+          float: left;
+          height: 100%;
+          position: relative;
+
+          @media @smartphone_port{
+              width: 100%;
+              float: none;
+          }
+
+          @media @tablet_port{
+            width: 100%;
+          }
+
+          @media @tablet_land{
+              width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,181 @@
+/*
+MESSAGE & SUBMISSION FROM BOX
+*/
+.up-redq-chatbox-form-wrapper{
+    padding: 45px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    overflow-y: scroll;
+
+    @media @smartphone_port{
+      height: auto !important;
+      padding: 45px 15px;
+    }
+
+    @media @tablet_port{
+        padding: 45px 30px;
+    }
+
+    .up-redq-title-wrapper{
+        display: block;
+        overflow: hidden;
+        margin-bottom: 50px;
+        text-align: center;
+        
+        h3.up-redq-form-title{
+            font-family: inherit;
+            font-size: @rq-up-fs-base * 2 - 2;
+            font-weight: @rq-up-fw-bold;
+            color: @rq-up-color-gray;
+            margin: 0;
+            line-height: 1.5;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            padding-left: 65px;
+            
+            &:before{
+                content: '\e93a';
+                font-family: 'micons';
+                font-size: @rq-up-fs-base * 2 + 8;
+                color: @rq-up-color-gray;
+                line-height: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .up-redq-form-wrapper{
+        width: 100%;
+        max-width: 800px;
+        display: inline-block;
+        text-align: left;
+        overflow: hidden;
+        padding: 80px 60px;
+        background-color: #fff;
+        .gl-border-radius(5px);
+        .gl-drop-shadow(0 0 3px fade(#7b7b7b, 40%));
+
+        @media @smartphone_port{
+          padding: 30px 25px;
+        }
+
+        @media @tablet_port{
+            padding: 50px 30px;
+        }
+
+        @media @tablet_land{
+            padding: 80px 70px;
+        }
+
+        .up-redq-fieldset{
+            display: block;
+            overflow: hidden;
+            padding-bottom: 25px;
+            position: relative;
+            // width: 500px;
+            width: 100%;
+
+            // @media @smartphone_port, @tablet_port{
+            //   width: 100%;
+            // }
+            
+
+            h3.up-redq-fieldset-label{
+                font-family: inherit;
+                font-size: @rq-up-fs-base;
+                font-weight: @rq-up-fw-bold;
+                color: @rq-up-fc-default;
+                display: block;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            p.up-redq-fieldset-subtitle{
+                font-family: inherit;
+                font-size: @rq-up-fs-base - 1;
+                font-weight: @rq-up-fw-normal;
+                color: @rq-up-fc-alt;
+                line-height: 1.5;
+                display: block;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .up-redq-inputbox{
+                font-family: inherit;
+                font-size: @rq-up-fs-base - 1;
+                font-weight: @rq-up-fw-normal;
+                color: @rq-up-fc-default;
+                line-height: 40px;
+                width: 100%;
+                height: 42px;
+                display: block;
+                padding: 0 15px;
+                margin: 10px 0 0;
+                border: 1px solid @rq-up-border-color;
+                overflow: hidden;
+                background-color: #ffffff;
+                .gl-drop-shadow(none);
+                .gl-border-radius(5px);
+                outline: 0;
+                .gl-baziar-transition;
+
+                &:focus{
+                    border-color: @rq-up-color-purple;
+                }
+            }
+
+            .up-redq-textarea{
+                font-family: inherit;
+                font-size: @rq-up-fs-base - 1;
+                font-weight: @rq-up-fw-normal;
+                color: @rq-up-fc-default;
+                line-height: 1.5;
+                width: 100%;
+                min-height: 135px;
+                display: block;
+                border: 1px solid @rq-up-border-color;
+                overflow: hidden;
+                background-color: #fff;
+                outline: 0;
+                padding: 15px 20px;
+                margin: 10px 0 0;
+                .gl-drop-shadow(none);
+                .gl-border-radius(5px);
+                .gl-baziar-transition;
+
+                &:focus{
+                    border-color: @rq-up-color-purple;
+                }
+            }
+
+            .up-redq--btn{
+                width: 100%;
+            }
+
+            .up-redq-category-dropdown-wrapper{
+                margin-top: 10px;
+            }
+
+            &.up-redq-invalid-input{
+                .up-redq-err-field{
+                    font-family: inherit;
+                    font-size: @rq-up-fs-base - 1;
+                    font-weight: @rq-up-fw-normal;
+                    color: @rq-up-color-red;
+                    position: absolute;
+                    right: 0;
+                    bottom: 2px;
+                }
+
+                input{
+                    border-color: @rq-up-color-red;
+                }
+            }
+        }
+    }
+}

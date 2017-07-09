@@ -1,0 +1,35 @@
+.gl-agent-featured-property{
+padding-left: 30px;
+    @media @smartphone_port{
+        padding: 0px;
+    }	
+    @media @tablet_port{
+        padding-left: 15px;
+    }	
+
+    h3.gl-content-title{
+        margin-bottom: 40px
+    }
+
+    .gl-featured-items{
+        display: block;
+        padding: 0;
+
+        .gl-feat-item-details,
+        .gl-feat-item-metas{
+            background-color: #ffffff;
+        }
+
+        .gl-feat-items-img-wrapper{
+            height: 240px;
+
+            @media @smartphone_port, @tablet_port, @tablet_land{
+                height: auto;
+
+                img{
+                    position: relative;
+                }
+            }
+        }
+    }
+}

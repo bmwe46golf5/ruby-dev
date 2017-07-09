@@ -1,0 +1,38 @@
+.gl-feat-listing-section{
+  background-color: #f9f9f9;
+  border-top: 1px solid #f2f2f2;
+
+  .gl-featured-listing-wrapper{
+    display: block;
+    overflow: hidden;
+
+    .gl-featured-items{
+      background-color: #ffffff;
+      .gl-feat-item-details{
+        h3{
+          a{
+            &:hover{
+              color: @gl-bz-primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gl-more-btn-wrapper{
+    display: block;
+    overflow: hidden;
+    margin-top: 60px;
+    text-align: center;
+
+    a{
+      background-color: @gl-bz-primary-color;
+      color: @gl-heading-base-color;
+
+      &:hover{
+        background-color: darken(@gl-bz-primary-color, 5%)
+      }
+    }
+  }
+}

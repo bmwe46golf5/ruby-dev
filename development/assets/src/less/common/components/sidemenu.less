@@ -1,0 +1,309 @@
+/* Close Button */
+.gl-side-menu-close-button {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    border: none;
+    outline: 0;
+    z-index: 1000;
+    background: transparent;
+    color: transparent;
+
+    @media @smartphone_port{
+        top: 30px;
+        right: 27px;
+    }
+}
+
+.gl-side-menu-close-button::before,
+.gl-side-menu-close-button::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: #888888;
+}
+
+.gl-side-menu-close-button::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.gl-side-menu-close-button::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* Menu */
+.gl-side-menu-wrap {
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: 400px;
+    height: 100%;
+    font-size: 14px;
+    -webkit-transform: translate3d(100%,0,0);
+       -moz-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+         -o-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform .4s;
+       -moz-transition:    -moz-transform .4s;
+        -ms-transition:     -ms-transform .4s;
+         -o-transition:      -o-transform .4s;
+            transition:         transform .4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+       -moz-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        -ms-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+         -o-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+    @media @smartphone_port{
+        width: 100%;
+    }
+
+}
+
+/*
+OVERLAY
+ */
+.gl-side-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    content: '';
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+       -moz-transform: translate3d(100%,0,0);
+        -ms-transform: translate3d(100%,0,0);
+         -o-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform 0s .4s, opacity 0.4s;
+       -moz-transition:    -moz-transform 0s .4s, opacity 0.4s;
+        -ms-transition:     -ms-transform 0s .4s, opacity 0.4s;
+         -o-transition:      -o-transform 0s .4s, opacity 0.4s;
+            transition:         transform 0s .4s, opacity 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+       -moz-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        -ms-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+         -o-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+
+/* Shown menu */
+.gl-show-menu .gl-side-menu-wrap {
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    -webkit-transition: -webkit-transform .8s;
+       -moz-transition:    -moz-transform .8s;
+        -ms-transition:     -ms-transform .8s;
+         -o-transition:      -o-transform .8s;
+            transition:         transform .8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+       -moz-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        -ms-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+         -o-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+}
+
+.gl-show-menu .gl-side-menu-overlay {
+    opacity: 1;
+    -webkit-transition: opacity 0.8s;
+       -moz-transition: opacity 0.8s;
+        -ms-transition: opacity 0.8s;
+         -o-transition: opacity 0.8s;
+            transition: opacity 0.8s;
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+       -moz-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        -ms-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+         -o-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+
+/*
+SIDE MENU ITEMS
+*/
+.gl-side-menu {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding: 75px 50px 50px;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+
+    // @media @smartphone_port{
+    //     padding: 100px 50px 50px;
+    // }
+}
+
+.gl-side-menu-widget-wrap {
+    width: 100%;
+
+    h3{
+        font-family: @gl-font-heading;
+        font-size: @gl-font-size-base + 7;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+        color: @gl-heading-base-color;
+        margin: 0 0 5px;
+        display: block;
+    }
+
+    p{
+        font-family: @gl-font-heading;
+        font-size: @gl-font-size-base + 1;
+        font-weight: 400;
+        color: @gl-text-base-color;
+        margin: 0;
+        display: block;
+    }
+
+    .gl-login-form{
+        display: block;
+        overflow: hidden;
+        padding: 30px 0;
+        border-bottom: 1px solid #dedede;
+
+        input{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base;
+            color: #bababa;
+            width: 100%;
+            height: 45px;
+            line-height: 43px;
+            padding: 0 20px;
+            background-color: transparent;
+            outline: 0;
+            border: 1px solid #eeeeee;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        button{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: none;
+            letter-spacing: 0;
+            width: 100%;
+            height: 42px;
+            line-height: 40px;
+            padding: 0;
+            outline: 0;
+            border: 0;
+            background-color: @gl-bz-primary-color;
+            margin-bottom: 0;
+            border-radius: 5px;
+            -webkit-transition: all .35s;
+               -moz-transition: all .35s;
+                 -ms-transition: all .35s;
+                    -o-transition: all .35s;
+                        transition: all .35s;
+
+            &:hover{
+                background-color: darken(@gl-bz-primary-color, 5%);
+            }
+        }
+    }
+
+    .gl-social-login-opt{
+        display: block;
+        overflow: hidden;
+        padding: 30px 0;
+
+        a.gl-social-login-btn{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            display: block;
+            width: 100%;
+            height: 42px;
+            line-height: 40px;
+            padding: 0;
+            outline: 0;
+            border: 0;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            -webkit-transition: all .35s;
+               -moz-transition: all .35s;
+                 -ms-transition: all .35s;
+                    -o-transition: all .35s;
+                        transition: all .35s;
+
+            &.gl-facebook-login{
+                background-color: @gl-facebook-login;
+
+                &:hover{
+                    background-color: darken(@gl-facebook-login, 5%);
+                }
+            }
+
+            &.gl-twitter-login{
+                background-color: @gl-twitter-login;
+                
+                &:hover{
+                    background-color: darken(@gl-twitter-login, 5%);
+                }
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .gl-other-options{
+        display: block;
+        overflow: hidden;
+
+        a{
+            font-family: @gl-font-heading;
+            font-size: @gl-font-size-base + 1;
+            font-weight: 400;
+            color: @gl-text-base-color;
+            -webkit-transition: all .35s;
+               -moz-transition: all .35s;
+                 -ms-transition: all .35s;
+                    -o-transition: all .35s;
+                        transition: all .35s;
+
+            &:hover{
+                color: @gl-bz-primary-color;
+            }
+
+            &.gl-forgot-pass{
+                float: left;
+            }
+
+            &.gl-signup{
+                float: right;
+            }
+        }
+    }
+}
